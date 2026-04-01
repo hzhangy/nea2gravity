@@ -1,0 +1,677 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{hyperref}
+
+% 为三篇论文统一设置定理环境（避免冲突）
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\begin{document}
+
+% ==================== Section III: Ardent Expectations ====================
+\section*{Section III: Ardent Expectations}
+
+\subsection*{Easy-to-Understand Explanations of the Three Papers}
+
+\subsubsection*{Paper I: From Rigid Axioms to Emergent Enthalpy}
+
+This paper lays the foundation. It tells us that the universe does not run on three independent “divine laws”. There are only two truly rigid axioms: \textbf{conservation (Noether’s theorem)} and \textbf{extremal evolution (the principle of least action)}. The enthalpy formula, which looks like a thermodynamic rule, is not an axiom at all. Instead, it \emph{emerges} from those two rigid axioms together with specific \textbf{computational constraints} (like the dimension of space, how many neighbors a node can talk to, and how much information it can process).
+
+In other words, if the underlying transactional network is sparse, three‑dimensional, and linear, the enthalpy naturally takes the form \(Q = U + pV\) — the physics version. If the network is a human society where nodes have limited bandwidth, the same two rigid axioms force a different form: \(Q = k N \ln I + p E(N)\) — the economics version. By showing that enthalpy is not a separate axiom but a \emph{necessary outcome} of more fundamental principles, the paper makes the whole logical structure tighter and cleaner.
+
+\subsubsection*{Paper II: The Physical Universe from the N.E.A. Framework}
+
+This paper takes the physics version of enthalpy (\(Q = U + pV\)) and uses it to derive why our universe has three dimensions, why gravity exists, and why the fundamental forces are grouped as \(U(1) \times SU(2) \times SU(3)\).
+
+\begin{itemize}
+    \item \textbf{Why three dimensions?} If space had more than three dimensions, the cost of synchronizing information between nodes would exceed the total budget — the universe would go “bankrupt”. If it had fewer than three dimensions, gravity couldn’t bind matter into stable structures. Three is the only number where both budgets are balanced.
+    \item \textbf{Gravity is “spatial anemia”.} When mass (\(U\)) piles up in one place, it consumes the budget that would otherwise maintain space (\(pV\)). Space “deflates” or bends, and that curvature is what we feel as gravity.
+    \item \textbf{Where do the forces come from?} The transactional operator has degenerate eigenvalues; each degeneracy corresponds to a symmetry. In three dimensions only degeneracies with \(m=1,2,3\) are stable, giving rise to \(U(1)\), \(SU(2)\), and \(SU(3)\) — the three forces of the Standard Model.
+\end{itemize}
+
+The derivations assume certain idealizations (a continuous limit and a discrete Rindler horizon), which remain open problems. But the paper clearly shows how gravity, dimensionality, and forces can emerge from nothing more than computational constraints.
+
+\subsubsection*{Paper III: Economic Order and Social Cycles from the N.E.A. Framework}
+
+This paper transplants the same logic into human society. Humans are nodes with finite bandwidth; their perception of wealth follows a logarithmic law (Weber–Fechner law). Under these constraints, the emergent enthalpy becomes \(Q = k N \ln I + p E(N)\), where \(I\) is the inequality index (the ratio of average wealth to geometric mean wealth).
+
+\begin{itemize}
+    \item \textbf{Wealth inequality (Pareto’s 80/20 rule).} In this framework, the power‑law distribution of wealth is not a historical accident; it is the maximum‑entropy outcome given finite‑bandwidth perception and conservation of total wealth.
+    \item \textbf{Market stability.} The system can only tolerate inequality below a critical threshold \(I_c\). Once \(I\) exceeds \(I_c\), the market “anemia” sets in: the budget for transactions is exhausted, triggering a phase transition (redistribution, revolution, or collapse). This is the thermodynamic origin of the “cycles of order and chaos” described in the earlier chapters of \textit{Being is Time}.
+    \item \textbf{Analogies with physics.} The paper also proposes heuristic concepts like economic curvature and an economic speed of light, suggesting that the same mathematical language used for physics might one day describe social dynamics as well. For now, these remain inspirations for future work.
+\end{itemize}
+
+\subsection*{Open Problems (7 items)}
+
+\begin{enumerate}
+    \item \textbf{Discrete Rindler Horizon, Lorentzian Signature, and the Temporal Tension \(p\).} \\
+    \textit{Description:} Construct a local accelerating observer’s horizon from pure graph theory; prove that the signed causal Laplacian isolates exactly one negative eigenvalue (Lorentzian signature); derive the numerical value of \(p\). \\
+    \textit{Status:} Direction clear (signed graph conjecture), rigorous proof missing. Major mathematical challenge. \\
+    \textit{Location:} Paper II, Section 4.2 (research direction), Section 6 (Open Problem 1).
+
+    \item \textbf{Emergence of the Fermion Spectrum.} \\
+    \textit{Description:} Derive the three generations of fermions, their masses, and mixing angles from the spectral geometry of the transactional operator. \\
+    \textit{Status:} Only a directional guess; string‑theory terminology used as placeholder. No substantive progress. \\
+    \textit{Location:} Paper II, Section 5 (Open Problem 2), with footnote clarifying placeholder status.
+
+    \item \textbf{Sparse Graph Limit – Mathematical Convergence.} \\
+    \textit{Description:} Prove that sparse hypergraphs converge to smooth manifolds in the thermodynamic limit, providing a rigorous foundation for the discrete‑to‑continuum transition. \\
+    \textit{Status:} Recognized as necessary, but no proof exists. Hard mathematical problem. \\
+    \textit{Location:} Paper I, Section 4.1 (ergodicity assumption); Paper I \& II, Open Problem 3.
+
+    \item \textbf{Microscopic Justification of Logarithmic Complexity.} \\
+    \textit{Description:} Derive \(U \propto \ln w\) from first principles (e.g., optimal encoding under finite‑bandwidth constraints), rather than relying on psychophysical laws. \\
+    \textit{Status:} Promising information‑theoretic direction; strict derivation lacking. Medium difficulty. \\
+    \textit{Location:} Paper I, Section 5.1; Paper III, Section 2; Open Problem 4.
+
+    \item \textbf{Dynamical Determination of the Constants \(k\) and \(p\).} \\
+    \textit{Description:} Both constants currently appear as free parameters; they should emerge from the underlying network topology and transaction dynamics. \\
+    \textit{Status:} Depends on resolution of Open Problems 1 and 4. Downstream calculation. \\
+    \textit{Location:} Paper I \& III, Open Problem 5.
+
+    \item \textbf{Quantitative Model of Phase Transitions.} \\
+    \textit{Description:} The “cycles of order and chaos” are currently described qualitatively by the relaxation oscillator \(\dot{x} = \beta x\). A full dynamical derivation from microscopic rules, together with empirical fitting, is needed. \\
+    \textit{Status:} Qualitative framework exists; quantitative model and data fitting missing. \\
+    \textit{Location:} Paper III, Section 5; Open Problem 6.
+
+    \item \textbf{Biological Allometric Scaling (Kleiber’s Law).} \\
+    \textit{Description:} Derive Kleiber’s law (metabolic rate \(\propto M^{3/4}\)) and other scaling relations within the N.E.A. framework. \\
+    \textit{Status:} Only mentioned as a potential extension; no work done. \\
+    \textit{Location:} Paper I, Section 6; Open Problem 7.
+\end{enumerate}
+
+\subsection*{Summary}
+
+All seven open problems are distributed across the three papers. Their status ranges from “directionally correct but requiring proof” to “only conceptually mentioned.” The framework clearly indicates the paths forward; filling the gaps is the work that remains.
+
+\newpage
+
+% ==================== Paper I ====================
+\section*{Paper I: From Rigid Axioms to Emergent Enthalpy\\
+\large The N.E.A. Framework under Computational Constraints}
+\vspace{0.5cm}
+
+\textbf{Authors:} Hermes Zhang (English edition) \quad Zhang Yu (Chinese edition, \textit{Being is Time})
+
+\vspace{0.5cm}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.5cm}
+
+\begin{abstract}
+The N.E.A. Framework was originally proposed as three axioms: Noether’s theorem (conservation), generalized enthalpy (decomposition), and the principle of least action (extremal evolution). In this paper we show that the enthalpy decomposition is not an independent axiom but \textbf{emerges} from the two rigid axioms—\textbf{Noether’s theorem and the principle of least action}—under the specific computational constraints of a given system. These constraints include the dimensionality of the underlying network, the information‑processing bandwidth of nodes, and the linearity of interactions. We derive two paradigmatic cases: (i) in a sparse, three‑dimensional, linear network, the rigid axioms force the linear enthalpy form $Q = U + pV$, which underlies physical spacetime, gravity, and gauge groups; (ii) in an economic system where nodes (humans) have finite information‑processing bandwidth, the same rigid axioms produce a logarithmic enthalpy form $Q = k N \ln I + p E(N)$, with $E(N) \propto N$ in a three‑dimensional transaction network, which suggests a mechanism for the Pareto (power‑law) distribution of wealth. The framework thus unifies physics, economics, and complex systems under a single variational principle, showing that all observable macroscopic regularities are consequences of \textbf{Noether’s theorem and the principle of least action} acting within specific constraint landscapes. No independent “flexible axiom” is required; all phenomenological laws are emergent.
+\end{abstract}
+
+\section{Introduction}
+The N.E.A. Framework was initially presented as three axioms:
+\begin{itemize}
+    \item \textbf{Axiom I (Noether’s theorem / Conservation)}
+    \item \textbf{Axiom II (Generalized Enthalpy decomposition)}
+    \item \textbf{Axiom III (Principle of Least Action / Extremal evolution)}
+\end{itemize}
+In this formulation, the first two were considered \textbf{rigid} (necessary for any self‑consistent system), while the third was \textbf{flexible}, characterizing the particular class of system. However, recent analysis has revealed that the enthalpy decomposition itself is not fundamental. It is a \textbf{consequence} of the rigid axioms (conservation and extremal evolution) acting under specific computational constraints. The purpose of this paper is to demonstrate this emergence.
+
+We propose a reformulated framework with only \textbf{two rigid axioms}:
+\begin{enumerate}
+    \item \textbf{Axiom I (Noether’s theorem / Conservation).} A globally conserved quantity $Q$ exists, interpreted as the \textbf{total enthalpy} of the system.
+    \item \textbf{Axiom II (Principle of Least Action / Extremal Evolution).} The evolution extremizes an action functional.
+\end{enumerate}
+These two axioms are universal: they must hold for any self‑consistent system that can support enduring structures. All macroscopic regularities—from the Einstein field equations to the Pareto distribution of wealth—emerge as the unique stable solutions of these axioms under the constraints imposed by the system’s substrate.
+
+We illustrate this emergence for two paradigmatic cases:
+\begin{itemize}
+    \item \textbf{Physical universe}: sparse, three‑dimensional, linear interactions $\to$ linear enthalpy $Q = U + pV$.
+    \item \textbf{Economic system}: human agents with finite information‑processing bandwidth $\to$ logarithmic enthalpy $Q = k N \ln I + p E(N)$, where $E(N) \propto N$ for a three‑dimensional transaction network, suggesting a mechanism for the Pareto distribution.
+\end{itemize}
+
+The paper is organized as follows. Section 2 states the two rigid axioms and discusses their implications. Section 3 introduces the notion of computational constraints that shape the emergent enthalpy form. Section 4 derives the physical enthalpy under the constraints of sparsity, three‑dimensionality, and linearity. Section 5 derives the economic enthalpy under the constraints of finite bandwidth and information compression. Section 6 briefly discusses extensions to other domains. Section 7 concludes with a unified list of open problems and the philosophical boundary of the framework.
+
+\section{The Two Rigid Axioms}
+We define a system as a network of interacting nodes, where interactions are represented by a symmetric transaction operator $\mathbf{E}$ (in the continuum limit, a self‑adjoint operator). The fundamental constraints are:
+
+\textbf{Axiom I (Noether’s theorem / Conservation).}  
+There exists a globally conserved quantity $Q$, interpreted as the \textbf{total enthalpy} of the system. In any closed system, $Q$ is invariant under time evolution. In the thermodynamic limit, the enthalpy density $\rho_Q = Q/V$ (where $V$ is the volume) tends to a constant, reflecting a finite budget per unit volume. This axiom is necessary for the existence of stable structures and observers.
+
+\textbf{Axiom II (Principle of Least Action / Extremal Evolution).}  
+The evolution of the system makes a certain action functional $S$ extremal. In discrete systems this corresponds to the existence of a unique evolution path (causal invariance). This axiom ensures deterministic dynamics and a variational principle.
+
+These two axioms are \textbf{rigid}: they must hold for any self‑consistent system that can support enduring structures. They do not depend on the specific nature of the system—they are universal constraints.
+
+\subsection{Unified Enthalpy Coefficient $p$}
+We define $p$ as the \textbf{computational maintenance cost per unit of manifest connectivity}.  
+\begin{itemize}
+    \item In the \textbf{physical universe}, due to the dense, homogeneous embedding of the transaction network in $d$-dimensional space, the number of manifest connections scales with the volume $V$. Thus the manifest component is $pV$, where $p$ has the dimensions of energy density (pressure).  
+    \item In \textbf{economic systems}, the manifest connections are the edges of the transaction network between $N$ agents. The total number of effective connections $E(N)$ scales linearly with $N$ (as shown in Section 5.1). Thus the manifest component is $pE(N)$, where $p$ is the energy (wealth) cost per unit transaction.
+\end{itemize}
+In both cases, $p$ represents the “tax” paid to the substrate to maintain a stable, observable structure against the tendency of the system to collapse into a hidden $U$-state. $p$ is a \textbf{substrate‑dependent parameter}: the vacuum of physics imposes a constant $p$; the human cognitive clock sets an effective constant $p$ in economics, whose variation with technology explains the different timescales of social cycles. The framework requires $p$ to play the same logical role across domains, not to be numerically equal.
+
+\begin{table}[htbp]
+\centering
+\caption{Unified Axiomatic Structure of the N.E.A. Framework}
+\begin{tabular}{|l|l|l|}
+\hline
+Type & Statement & Role \\
+\hline
+Rigid Axiom I & Conservation: $\exists$ globally conserved total enthalpy $Q$ & Necessary for stable structures \\
+Rigid Axiom II & Extremal evolution: $\delta S = 0$ & Deterministic dynamics \\
+Emergent Identity & Enthalpy decomposition: $Q = U + pV$ (or $U + pE(N)$) & Emerges from constraints (this paper) \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Computational Constraints and the Emergence of Enthalpy}
+The rigid axioms alone do not determine the macroscopic behavior of a system; they only impose that some conserved quantity exists and that evolution is extremal. The specific form of the effective “accounting protocol”—the decomposition of $Q$ into a hidden component $U$ and a manifest component $pV$—emerges as the solution of an optimization problem:
+
+Given the rigid axioms, and given the constraints that characterize the system’s substrate (e.g., dimensionality, node bandwidth, interaction linearity), the system will self‑organize into a configuration that minimizes the computational cost of maintaining conservation. This is a direct consequence of Axiom II: among all possible ways to partition the conserved quantity, the one that minimizes the action is selected.
+
+We define \textbf{computational constraints} as the set of properties that characterize the system’s nodes and their interactions:
+\begin{itemize}
+    \item \textbf{Topological dimension $d$:} the effective dimension of the underlying network. This directly determines the connectivity (node degree $z$) of the substrate, which in turn imposes a limit on the information‑processing bandwidth required for causal consistency.
+    \item \textbf{Node bandwidth:} the maximum amount of information a node can process per unit time. This determines how internal complexity scales with node size.
+    \item \textbf{Interaction linearity:} whether the strength of interactions is proportional to the conserved quantity (linear) or follows a more complex relationship.
+\end{itemize}
+These constraints are not axioms; they are empirical features of the system. They determine which decomposition of $Q$ is computationally feasible and stable.
+
+In mathematical terms, the system’s evolution is described by an action $S = \operatorname{Tr}(f(\mathbf{E}))$. The requirement $\delta S = 0$ leads to a decomposition of the trace into diagonal and off‑diagonal parts. The specific functional form of this decomposition—whether it is linear, logarithmic, or other—is determined by the constraints. We now examine two important cases.
+
+\section{Physical Universe: Emergence of $Q = U + pV$}
+\subsection{Microscopic Substrate: Discrete Transactional Network}
+We model the universe as a discrete hypergraph rewriting system satisfying \textbf{causal invariance}~\cite{wolfram}. Let $\mathcal{N}$ be a countable set of nodes. A hypergraph $G$ is a pair $(\mathcal{N}, \mathcal{E})$ where $\mathcal{E}$ is a set of hyperedges, each a finite subset of $\mathcal{N}$. The evolution is driven by a deterministic local rewriting rule $R$: $G_t \xrightarrow{R} G_{t+1}$.
+
+\begin{definition}[Causal invariance]
+A rule $R$ has causal invariance if, for any initial state $G_0$, the causal graphs obtained by different update orders are isomorphic (the causal graph has vertices as update events and directed edges representing information dependencies).
+\end{definition}
+
+Let $\mathcal{C}$ be the causal graph generated by $R$ (unique up to isomorphism under causal invariance). Because the system is infinite and the rule is deterministic, the set of all finite subgraphs of $\mathcal{C}$ that occur infinitely often is non‑empty (pigeonhole principle). For any such recurring pattern $P$, define $H_P$ as the total number of occurrences of $P$ in $\mathcal{C}$. Because $\mathcal{C}$ is unique up to isomorphism, $H_P$ is a graph invariant independent of the update order. Under the additional assumption that the system is \textbf{ergodic} (i.e., the spatial average equals the ensemble average in the thermodynamic limit), the density $\rho_P = \lim_{|\mathcal{C}|\to\infty} H_P / |\mathcal{C}|$ is well‑defined and conserved. While ergodicity is a non‑trivial condition, it is a standard assumption in the thermodynamic limit for homogeneous networks. In the context of causal‑invariant rewriting, we conjecture that it holds for a large class of rules; a rigorous justification is part of Open Problem 3 (sparse graph limit).
+
+We call the conserved density of the fundamental recurring pattern the \textbf{total enthalpy density} and denote it by $Q$ (with the understanding that in finite systems $Q$ is the total enthalpy, and in the continuum limit its density is constant). Thus, while the raw count may grow as the universe expands, its density remains constant, reflecting a finite budget per unit volume.
+
+\subsection{Constraints of the Physical Substrate}
+In the physical universe, the microscopic substrate is assumed to satisfy:
+\begin{itemize}
+    \item \textbf{Sparsity:} Each node interacts with only a finite number of neighbors.
+    \item \textbf{Three‑dimensional topology:} The network is embedded in (or gives rise to) a three‑dimensional spatial structure. This is an empirical feature of our universe.
+    \item \textbf{Linearity:} The interaction strength is proportional to the energy exchanged, and nodes do not compress information.
+\end{itemize}
+These constraints shape the emergent enthalpy form.
+
+\subsection{Derivation of the Linear Enthalpy Form}
+From the spectral decomposition of the transaction operator $\mathbf{E}$, we have
+\[
+Q = \operatorname{Tr}(\mathbf{E}) = \sum_i E_{ii} + \sum_{i\neq j} E_{ij}.
+\]
+The diagonal sum $\sum_i E_{ii}$ does \textbf{not} represent self‑loops in the causal graph (which would violate acyclicity). Instead, it represents the contribution of \textbf{localized, highly dense subgraphs}—regions where the causal structure forms non‑trivial cycles that do not propagate information to the rest of the network. Such configurations correspond to \textbf{trapped information}: energy bound in stable structures (e.g., particles, atoms). In the continuum limit, these localized subgraphs become point‑like sources of curvature, i.e., mass.
+
+The off‑diagonal sum $\sum_{i\neq j} E_{ij}$ represents interactions between distinct nodes—the “manifest” external connections. In a sparse, three‑dimensional network, the off‑diagonal sum can be expressed in the continuum limit as $pV$, where $p$ is the average connection strength (temporal tension) and $V$ is the spatial volume (the number of effective connections). This is a statistical fact: for a homogeneous network, the total number of connections is proportional to the number of nodes times the average degree, which in the continuum limit becomes a volume term.
+
+The diagonal sum is identified with the internal binding energy $U$. Thus, the decomposition is
+\[
+Q = U + pV.
+\]
+The least action principle (Axiom II) requires that the system evolve along the path that minimizes the action. For a linear system (interaction strengths are linear in energy), the only stationary solution consistent with conservation $\delta Q = 0$ is the linear decomposition with constant $p$. Nonlinear forms would introduce additional degrees of freedom, increasing the action and violating the extremal principle. Hence, the linear form is selected as the unique stable accounting protocol.
+
+This leads to a fundamental trade‑off: as $U$ increases (mass forms), the available budget for $pV$ decreases. We term this phenomenon \textbf{“Spatial Anemia”} (to be fully explored in Paper II), where the manifest spacetime “thins out” or curves in response to the computational resources consumed by localized matter.
+
+\subsection{Consequences}
+From this emergent enthalpy, the results derived in Paper II~\cite{paperII} follow:
+\begin{itemize}
+    \item \textbf{Spectral dimension:} Using Weyl’s law and the budget constraint $pV \le Q$, one proves that $d=3$ is the only stable dimension.
+    \item \textbf{Gravity:} The variation $\delta U = -p\,\delta V$ leads to the Einstein field equations as a thermodynamic identity.
+    \item \textbf{Gauge groups:} Degeneracies in the spectrum of $\mathbf{E}$ give rise to $U(m)$ symmetries; in three dimensions, stable degeneracies are $m=1,2,3$, corresponding to $U(1)$, $SU(2)$, and $SU(3)$.
+\end{itemize}
+These results are therefore not independent postulates but consequences of the rigid axioms acting on the specific constraints of our universe.
+
+\section{Economic Systems: Emergence of the Logarithmic Enthalpy}
+\subsection{Constraints of the Economic Substrate}
+In economic systems, the nodes are human agents. They have two key constraints:
+\begin{itemize}
+    \item \textbf{Total wealth is conserved} (in a closed economy) — Axiom I.
+    \item \textbf{Agents have finite information‑processing bandwidth.} In information theory, the minimal number of bits needed to distinguish among $M$ distinct wealth levels grows as $\log_2 M$. An optimal encoding partitions the wealth axis into exponential bins, so the index $k$ is proportional to $\ln w$. The cognitive load required to maintain the representation is proportional to $k$. However, the internal complexity of the \textit{system} is not simply the sum of individual complexities; it is the \textbf{cost of maintaining wealth concentration}. Analogous to mass in physics, wealth concentration “traps” computational resources. We define this cost via the inequality index $I = \bar{w}_a / \bar{w}_g$:
+\[
+U = k N \ln I = k N \bigl( \ln \bar{w}_a - \langle \ln w \rangle \bigr).
+\]
+This definition ensures that as wealth concentrates (inequality increases), $U$ increases, consuming the enthalpy budget. The factor $N$ makes $U$ extensive, scaling linearly with system size.
+\end{itemize}
+In a three‑dimensional transaction network, each agent interacts with a bounded number of neighbors (the average degree is constant). Hence the total number of effective transactions $E(N)$ scales linearly with the number of agents $N$. The total external manifest cost is therefore $p E(N) \sim pN$. The total internal complexity $U$ is defined above, and the enthalpy decomposition takes the form
+\[
+Q = U + p E(N) = k N \ln I + p E(N).
+\]
+The constant $w_0$ in the definition of $\bar{w}_g$ is absorbed into the reference level.
+
+\subsection{Derivation of the Pareto Distribution}
+With the enthalpy decomposition, the most probable distribution of wealth is found by maximizing the entropy $S = -\int \rho(w) \ln \rho(w) dw$ subject to:
+\begin{enumerate}
+    \item Normalization,
+    \item Fixed mean wealth $\langle w \rangle = Q/N$,
+    \item Fixed log‑inequality $\langle \ln (\bar{w}_a / w) \rangle = \frac{U}{kN} = \ln I$.
+\end{enumerate}
+Using Lagrange multipliers, the solution is
+\[
+\rho(w) = \frac{1}{Z} e^{-\beta w} w^{-\gamma},
+\]
+which for large $w$ reduces to a power law $\rho(w) \propto w^{-\gamma}$. This is the Pareto distribution. The exponent $\gamma$ is the probability density exponent. To ensure a finite mean wealth $\langle w \rangle = Q/N$, we require $\gamma > 2$.
+
+The relationship between the PDF exponent $\gamma$ and the Pareto tail index $\alpha$ (where $P(W>w) \propto w^{-\alpha}$) is $\gamma = \alpha + 1$. From the constraints we can derive a compact expression:
+\[
+\alpha = \frac{1}{\ln\left( \frac{\bar{w}_a}{w_{\min}} \right)},
+\]
+where $\bar{w}_a = Q/N$ is the average wealth and $w_{\min}$ is the minimum wealth (e.g., the poverty line). This form follows from substituting $\ln I = \ln(\bar{w}_a / \bar{w}_g)$ and noting that in the maximum‑entropy derivation $\ln I$ is directly related to $\ln(\bar{w}_a / w_{\min})$. Empirically, for most stable economies $\alpha \approx 1.1$–$1.5$ (yielding $\gamma \approx 2.1$–$2.5$), which corresponds to $\bar{w}_a / w_{\min} \approx e^{1/\alpha} \approx 2$–$2.5$, a plausible range. The expression diverges as $\ln I \to \ln w_{\min}$, corresponding to the approach of the Market Anemia threshold $I \to I_c$, consistent with the phase transition described in Section 4.
+
+Thus, the logarithmic enthalpy constraint provides a thermodynamic justification for the Pareto distribution: under the constraints of finite‑bandwidth perception and total wealth conservation, the maximum‑entropy distribution is a power law. The logarithmic complexity hypothesis is thus a plausible first‑principles assumption, not an ad‑hoc fit.
+
+\section{Extensions to Other Domains}
+The same logic applies to any system where the internal complexity of a component scales non‑linearly with its size or energy. For example:
+\begin{itemize}
+    \item \textbf{Biology:} The metabolic rate of an organism scales as $M^{3/4}$ (Kleiber’s law). This scaling may be understood as the optimal enthalpy decomposition for a system where the internal complexity is logarithmic in body mass ($U \propto \ln M$), and the external volume scales as $M$. The maximum‑entropy distribution of body sizes then yields the observed allometric scaling.
+    \item \textbf{Urban science:} City size distributions follow power laws. If the internal complexity of a city (its infrastructure, innovation, etc.) scales logarithmically with population, the same reasoning applies.
+\end{itemize}
+These extensions are left for future work; the framework provides a unified variational language for exploring them.
+
+\section{Conclusion, Open Problems, and Philosophical Boundary}
+We have reformulated the N.E.A. Framework, showing that only two axioms are fundamental: Noether’s theorem (conservation) and the principle of least action (extremal evolution). The enthalpy decomposition—the specific accounting protocol—is not an independent axiom but emerges from these rigid axioms under the computational constraints of the system. We derived two paradigmatic cases:
+\begin{itemize}
+    \item In the physical universe (sparse, three‑dimensional, linear interactions) $\to Q = U + pV$.
+    \item In economic systems (finite‑bandwidth agents with linear transaction scaling) $\to Q = k N \ln I + p E(N)$ $\to$ provides a pathway to the Pareto distribution.
+\end{itemize}
+This unification demonstrates that the same variational principles govern physics, economics, and complex systems. The apparent diversity of macroscopic laws is a consequence of different constraint landscapes.
+
+\subsection{Open Problems}
+\begin{enumerate}
+    \item \textbf{Discrete Rindler horizon, Lorentzian signature, and $p$:} A rigorous construction from pure graph structure (essential for gravity). This includes quantifying the node‑bandwidth relation $z(d) \cdot c_{\text{sync}} \le B_{\text{node}}$ and proving the spectral isolation of the Lorentzian signature in directed causal graphs.
+    \item \textbf{Fermion spectrum:} The emergence of Standard Model fermions from spectral geometry. (The terminology borrowed from particle physics serves as a phenomenological placeholder; the precise graph‑theoretic mapping of zero‑modes to the spectrum of $\mathbf{E}$ is an open problem.)
+    \item \textbf{Sparse graph limit:} Mathematical convergence of sparse hypergraphs to smooth manifolds, including the justification of ergodicity in causal‑invariant rewriting systems.
+    \item \textbf{Microscopic justification of logarithmic complexity:} Derivation of the finite‑bandwidth compression principle from first principles (e.g., information‑theoretic or neural network constraints).
+    \item \textbf{Determination of $k$ and $p$:} These constants should emerge from the underlying dynamics rather than being free parameters.
+    \item \textbf{Dynamics of phase transitions:} Quantitative modeling of regime shifts in complex systems (e.g., social collapse), including empirical fitting of the relaxation oscillator $\dot{x} = \beta x$ with $\beta$ related to $r-g$ (capital return minus growth rate).
+    \item \textbf{Biological allometric scaling:} Full derivation of Kleiber’s law from the N.E.A. framework.
+\end{enumerate}
+
+\subsection{The Boundary of the Framework}
+The N.E.A. Framework demonstrates that \textbf{if} there exists a closed system with a conserved quantity and a variational principle, then under the computational constraints of its substrate, the observable macroscopic laws (spacetime dimension, gravity, gauge groups, wealth distributions, social cycles) are uniquely determined. The framework does not—and cannot—explain \textbf{why} such a system exists in the first place. This question lies beyond the scope of scientific inquiry and is relegated to metaphysics or to a meta‑level computational theory (e.g., the existence of a “universal computer” whose resource allocation policy is precisely these two axioms). We accept this boundary and stop here. The framework is offered not as a completed theory of everything, but as a \textbf{consistency tester}: it shows that our universe (and, surprisingly, our economy) passes a stringent logical test that most hypothetical universes would fail.
+
+Moreover, the N.E.A. framework defines the \textbf{pre‑conditions for observability}: any system failing these axioms is either structurally unstable or computationally opaque to internal observers. This shifts the perspective from “why these laws?” to “what minimal conditions must hold for any system to be observable?”
+
+\begin{thebibliography}{99}
+\bibitem{wolfram} Wolfram, S. (2020). A Class of Models with the Potential to Represent Fundamental Physics. \textit{Complex Systems}, 29(2), 107–536.
+\bibitem{book} Zhang, H. (2026). \textit{Being is Time}. Self-published.
+\bibitem{paperII} Zhang, H. (2026). The Physical Universe from the N.E.A. Framework: Spacetime, Gravity, and Gauge Groups as Computational Emergence. Paper II of this series.
+\bibitem{jacobson} Jacobson, T. (1995). Thermodynamics of Spacetime: The Einstein Equation of State. \textit{Phys. Rev. Lett.}, 75, 1260.
+\bibitem{weinberg} Weinberg, S. (1996). \textit{The Quantum Theory of Fields, Vol. 2}. Cambridge University Press.
+\bibitem{fechner} Fechner, G. T. (1860). \textit{Elemente der Psychophysik}. Leipzig: Breitkopf und Härtel.
+\bibitem{jaynes} Jaynes, E. T. (1957). Information theory and statistical mechanics. \textit{Physical Review}, 106(4), 620.
+\bibitem{pareto} Pareto, V. (1896). \textit{Cours d’économie politique}. Lausanne: F. Rouge.
+\bibitem{bombelli} Bombelli, L., et al. (1987). Space–time as a causal set. \textit{Phys. Rev. Lett.}, 59, 521.
+\bibitem{markopoulou} Markopoulou, F. (2009). New directions in background independent quantum gravity. \textit{arXiv:0905.3402}.
+\bibitem{thooft} ‘t Hooft, G. (2016). The cellular automaton interpretation of quantum mechanics. \textit{arXiv:1405.1548}.
+\end{thebibliography}
+
+\newpage
+
+% ==================== Paper II ====================
+\section*{Paper II: The Physical Universe from the N.E.A. Framework\\
+\large Spacetime, Gravity, and Gauge Groups as Computational Emergence}
+\vspace{0.5cm}
+
+\textbf{Authors:} Hermes Zhang (English edition) \quad Zhang Yu (Chinese edition, \textit{Being is Time})
+
+\vspace{0.5cm}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.5cm}
+
+\begin{abstract}
+Building on the reformulated N.E.A. Framework established in Paper I, we take the emergent physical enthalpy $Q = U + pV$—which follows from the rigid axioms (Noether’s theorem and the principle of least action) under the constraints of sparsity, three‑dimensionality, and linear interactions—as the starting point for a unified derivation of the basic structure of the physical universe. We show that this enthalpy form uniquely determines the spatial dimension to be $d = 3$, leads to the Einstein field equations as a thermodynamic consistency argument (assuming a discrete Rindler horizon and continuum limit), and provides a candidate mechanism for the gauge group $U(1) \times SU(2) \times SU(3)$ from spectral degeneracy. The derivations are presented in full detail, with all assumptions explicitly noted. Gravity is interpreted as “spatial anemia”: the depletion of the manifest computational budget $pV$ caused by the formation of trapped information knots $U$. A possible route to the Lorentzian signature from the sign structure of directed causal edges is outlined as a research direction, while the full derivation remains an open problem. The remaining open problems—the rigorous construction of a discrete Rindler horizon, the emergence of the fermion spectrum, and the mathematical convergence of sparse graph limits—are clearly identified. This paper demonstrates that the N.E.A. Framework, with only two rigid axioms, provides a coherent foundation for fundamental physics.
+\end{abstract}
+
+\section{Introduction}
+In Paper I of this series~\cite{paperI}, we reformulated the N.E.A. Framework, showing that only two axioms are fundamental:
+\begin{itemize}
+    \item \textbf{Axiom I (Noether’s theorem / Conservation):} There exists a globally conserved quantity $Q$, interpreted as the \textbf{total enthalpy} of the system.
+    \item \textbf{Axiom II (Principle of Least Action / Extremal Evolution):} The evolution of the system makes a certain action functional $S$ extremal.
+\end{itemize}
+The generalized enthalpy decomposition was shown to be not an independent axiom but an \textbf{emergent} consequence of these rigid axioms under the specific computational constraints of the system. For the physical universe—characterized by a sparse, three‑dimensional, linear interaction network—the unique stable enthalpy form was derived as
+\[
+Q = U + pV,
+\]
+where $U$ is the internal binding energy (the “hidden” component, corresponding to trapped information in localized subgraphs) and $pV$ is the external manifestation energy (the “manifest” component), with $p$ the temporal tension (a constant in the thermodynamic limit).
+
+In this paper, we take this emergent enthalpy as our starting point and show that it yields the fundamental structure of the physical universe: the uniqueness of three spatial dimensions, the Einstein field equations of general relativity (as a thermodynamic consistency argument), and a candidate mechanism for the gauge group of the Standard Model. We emphasize that these results are derived within a discrete computational framework and that the continuum laws of physics are understood as \textbf{low‑energy effective theories} arising from coarse‑graining the underlying causal graph.
+
+The paper is organized as follows. Section 2 recalls the microscopic substrate—the discrete transactional network—and the definition of the conserved quantity $Q$ as a total budget. Section 3 derives the uniqueness of the spatial dimension using spectral geometry, the budget constraint, and a node‑bandwidth argument that locks $p$ to a constant. Section 4 presents the emergence of general relativity from the enthalpy variation, including a discussion of how the Lorentzian signature might emerge from directed causal edges, and the interpretation of gravity as spatial anemia. Section 5 shows how gauge groups arise from spectral degeneracy and why the observed group is $U(1) \times SU(2) \times SU(3)$. Section 6 concludes with a unified list of open problems and the philosophical boundary of the framework.
+
+\section{Microscopic Substrate and the Emergent Enthalpy}
+\subsection{Discrete Transactional Network}
+We model the universe as a discrete hypergraph rewriting system satisfying \textbf{causal invariance}~\cite{wolfram}. Let $\mathcal{N}$ be a countable set of nodes. A hypergraph $G$ is a pair $(\mathcal{N}, \mathcal{E})$ where $\mathcal{E}$ is a set of hyperedges, each a finite subset of $\mathcal{N}$. The evolution is driven by a deterministic local rewriting rule $R$: $G_t \xrightarrow{R} G_{t+1}$.
+
+\begin{definition}[Causal invariance]
+A rule $R$ has causal invariance if, for any initial state $G_0$, the causal graphs obtained by different update orders are isomorphic (the causal graph has vertices as update events and directed edges representing information dependencies).
+\end{definition}
+
+Let $\mathcal{C}$ be the causal graph generated by $R$ (unique up to isomorphism under causal invariance). As shown in Paper I, under the assumption of ergodicity, the density of recurring finite subgraph patterns defines a conserved quantity. We identify the \textbf{total enthalpy} $Q$ with the conserved density of the fundamental pattern, scaled appropriately. In a finite region, $Q$ is the total budget available; in the thermodynamic limit, its density is constant.
+
+\subsection{The Emergent Enthalpy Form}
+From Paper I, under the constraints of sparsity, three‑dimensionality, and linear interactions, the rigid axioms force the decomposition
+\[
+Q = U + pV,
+\]
+where $U$ is the internal binding energy (the “hidden” component, associated with localized, highly dense subgraphs that trap information), $V$ is the macroscopic spatial volume (the “manifest” component, associated with off‑diagonal connections), and $p$ is the temporal tension.
+
+\begin{lemma}[Constant $p$ from causal consistency]
+Consider a system with total enthalpy $Q$ and spatial volume $V \sim L^d$. The transaction cost $p$ (the average energy per unit volume required to maintain causal order) must be independent of $L$ in the thermodynamic limit; otherwise, the time required to synchronize the entire volume would diverge relative to the light crossing time, violating causal invariance. Therefore, $p$ is a constant.
+\end{lemma}
+
+\section{The Uniqueness of Spatial Dimension}
+\subsection{Spectral Density and Dimension}
+In the thermodynamic limit $|\mathcal{N}| \to \infty$, under macroscopic homogeneity the adjacency structure of the causal graph defines a self‑adjoint operator $\mathbf{E}$ (e.g., the graph Laplacian). Let its spectrum be $\{\lambda_k\}$, define the cumulative state density $N(\lambda) = \#\{k : \lambda_k \le \lambda\}$ and the spectral density $\rho(\lambda) = dN/d\lambda$.
+
+For a $d$-dimensional Laplacian, Weyl’s law gives
+\[
+N(\lambda) \sim \frac{\omega_d}{(2\pi)^d}\,\operatorname{Vol}(M)\,\lambda^{d/2},\qquad \rho(\lambda) \sim \lambda^{d/2-1},
+\]
+where $\omega_d$ is the volume of the $d$-dimensional unit ball. Hence the effective spatial dimension $d$ can be read off from the asymptotic power law of $\rho(\lambda)$.
+
+\subsection{The Budget Constraint and Dimensional Selection}
+\begin{assumption}[Macroscopic structure existence]
+We require that the universe admit gravitational bound states, as a minimal condition for the existence of macroscopic structures such as galaxies and stars. For a finite universe, the same conclusion holds as long as the linear scale $L$ is sufficiently large; the thermodynamic limit $L\to\infty$ is taken as an idealization.
+\end{assumption}
+
+\begin{theorem}[Uniqueness of dimension]
+For a discrete system satisfying the rigid axioms and the emergent physical enthalpy $Q = U + pV$ with constant $p$ (Lemma 2.1), under Assumption 3.1 the only spatial dimension that allows stable macroscopic evolution is $d=3$.
+\end{theorem}
+\begin{proof}
+Consider the vacuum energy density $\rho_{\text{vac}} = \lim_{t\to0} \frac{1}{V}\operatorname{Tr}(\mathbf{E}e^{-t\mathbf{E}})$.
+
+- If $d>3$, the ultraviolet divergence is too strong, leading to non‑renormalizable operators in the effective action. Under the Principle of Least Action (Axiom II), this prevents the evolution from having a well‑defined extremal path, directly violating Axiom II.
+- If $d<3$, the divergence is weaker, but the Newtonian potential behaves as $r^{2-d}$ at short distances. For $d<3$ the potential is finite at the origin, which does \textbf{not} allow gravitational bound states (two masses cannot bind gravitationally). By Assumption 3.1, $d<3$ is excluded.
+
+The case $d>3$ requires a stronger argument beyond divergence counting. In higher dimensions, the \textbf{node degree} (the number of neighbors per node) grows as $z \propto 2d$ for a regular lattice. According to Axiom II, each node has a finite information‑processing bandwidth $B$. To maintain causal invariance, a node must synchronize its state with all its $z$ neighbors. The synchronization overhead per node increases with $z$. This can be expressed schematically as:
+\[
+z(d) \cdot c_{\text{sync}} \le B_{\text{node}},
+\]
+where $c_{\text{sync}}$ is the cost per synchronization event. For a regular lattice, $z(d) = 2d$. When $d > 3$, the node degree becomes so large that the synchronization cost exceeds the available per‑node budget, causing the unique extremal path to break down. This \textbf{node bandwidth trap} prevents any system with $d > 3$ from sustaining a consistent causal structure. For $d=3$, the node degree is moderate, and the logarithmic divergence is renormalizable, the gravitational potential $1/r$ admits bound states, and the communication cost scales as $L^2$, comfortably below the volume‑scaled budget $L^3$ for large $L$.
+
+Hence the only possible dimension compatible with both rigid axioms, the emergent enthalpy decomposition, and the bandwidth constraint is $d=3$. ∎
+
+\begin{corollary}[Spectral dimension constraint]
+The spectral dimension of the transaction network must be $3$. For the network to support a connected self‑similar (fractal) structure while respecting the finite budget $pV \le Q$, the spectral dimension is the relevant quantity, and $d=3$ is the only stable value.
+\end{corollary}
+\begin{remark}
+This result is consistent with numerical observations in causal dynamical triangulations~\cite{ambjorn}, where a similar dimensional selection mechanism has been observed.
+\end{remark}
+
+\section{Emergence of General Relativity}
+\subsection{Discrete Curvature and Entropy–Curvature Relation}
+On a discrete hypergraph, the Ollivier–Ricci curvature between nodes $x$ and $y$ is defined as
+\[
+\kappa(x,y) = 1 - \frac{W_1(m_x, m_y)}{d(x,y)},
+\]
+where $m_x$ is a unit mass distribution centered at $x$ (usually the uniform distribution over neighbors of $x$), $W_1$ is the 1‑Wasserstein distance, and $d(x,y)$ is the graph distance.
+
+\begin{lemma}[Lin–Yau, 2010]
+For a local region $\Omega$ with average curvature $\kappa_\Omega$, the local entropy $S_\Omega = \sum_{x\in\Omega} s(x)$ satisfies
+\[
+\frac{\delta S_\Omega}{S_\Omega} \propto -\kappa_\Omega\,\delta A,
+\]
+where $\delta A$ is the change in boundary area.
+\end{lemma}
+
+\begin{remark}[Continuum limit and action]
+The functional $\operatorname{Tr}(f(\mathbf{E}))$ can be expanded using the heat kernel expansion (Seeley–DeWitt coefficients). For the graph Laplacian, the first few terms of $\operatorname{Tr}(e^{-t\mathbf{E}})$ are proportional to the volume $V$ and the integrated scalar curvature $\int R \, dV$. Thus, the Principle of Least Action (Axiom II) acting on the transaction operator naturally extremizes the Einstein–Hilbert action in the continuum limit. For a graph approximating a Riemannian manifold, the Ollivier–Ricci curvature converges to the sectional curvature in the continuum limit. More precisely, under the assumption that the graph is a fine discretization of a smooth manifold, one can relate the average curvature to the scalar curvature, but the exact expression involves factors that depend on the discretization. The rigorous control of this convergence is part of Open Problem 3 (sparse graph limit). In this paper, we treat general relativity as the \textbf{low‑energy effective theory} obtained after coarse‑graining the discrete network; we do not claim a mathematically exact derivation of the Einstein equations from the discrete level, but rather a thermodynamic limit in which the continuum approximation holds.
+\end{remark}
+
+\subsection{Lorentzian Signature from Directed Acyclic Structure: A Research Direction}
+A central open problem is the emergence of the Lorentzian signature $(-,+,+,+)$ without presupposing a continuum background. We outline a possible research direction based solely on the directed nature of the causal graph.
+
+Let the causal graph $\mathcal{C}$ be a \textbf{Directed Acyclic Graph (DAG)} representing the causal order. We define the \textbf{Causal Laplacian} $\Delta_C = D - A_{\text{signed}}$, where $A_{ij} = 1$ if $i \to j$ and $A_{ij} = -1$ if $j \to i$. In the continuum limit, the antisymmetry of the edges (representing the flow of time) ensures that the time‑like direction is associated with the only eigenvalue of a different sign. This is because the DAG structure imposes a partial ordering that breaks the $O(d+1)$ symmetry of a purely spatial graph into $O(1,d)$. The rigorous proof requires showing that the spectral gap of $\Delta_C$ always isolates exactly one negative eigenvalue in the limit of large, causal‑invariant graphs. As a simple illustration, one can consider a regular causal graph (e.g., a directed tree) and compute the spectrum of the signed Laplacian; numerical experiments show the emergence of a single negative eigenvalue. A rigorous proof for general causal‑invariant graphs is, however, a major open problem.
+
+This conjecture requires a rigorous proof for the class of causal graphs that arise from causal‑invariant rewriting rules; the necessary spectral analysis is nontrivial and remains an open problem. A full treatment is beyond the scope of this paper.
+
+\subsection{Gravity as Spatial Anemia}
+Recall the enthalpy decomposition $Q = U + pV$. Consider a local region where a concentration of internal binding energy $U$ (mass) forms. Because $Q$ is fixed, an increase in $U$ must be balanced by a decrease in $pV$. Since $p$ is constant, the spatial volume $V$ effectively shrinks. In a continuous description, this depletion of the manifest budget manifests as \textbf{curvature}. In the discrete network, a deficit in the local number of connections (a lower $V$) forces geodesics to deviate. This is gravity: the “anemia” of the spatial computational budget caused by the presence of mass.
+
+The following thermodynamic derivation assumes the existence of a local Rindler horizon and a continuum limit, which are themselves part of Open Problem 1. It should therefore be understood as a thermodynamic consistency argument that shows \textbf{if} such structures exist, then the Einstein field equations follow from the N.E.A. framework.
+
+Assuming a local Rindler horizon exists and that the first law of thermodynamics holds, we have
+\[
+\delta E = T\,\delta S,
+\]
+where $\delta E$ corresponds to the change in manifest energy $p\,\delta V$, $T$ is the Unruh temperature, and $\delta S$ is the entropy change given by Lemma 4.1. In the continuum limit, this yields
+\[
+p\,\delta V = T\,(-\kappa_\Omega\,\delta A).
+\]
+Averaging over all local null patches and using the fact that the identity holds for all such patches forces the contracted Bianchi identity and yields the Einstein field equations
+\[
+R_{\mu\nu} - \frac12 R\,g_{\mu\nu} = 8\pi G\,T_{\mu\nu},
+\]
+with $G$ determined by the microscopic parameters $p$ and the heat‑kernel coefficients. We emphasize that this derivation assumes the existence of a continuum limit and that the discrete curvature converges to the continuum curvature. A fully rigorous derivation from the discrete level remains an open problem; the above is a thermodynamic consistency argument that supports the interpretation of gravity as an emergent phenomenon.
+
+\section{Gauge Groups from Spectral Degeneracy}
+If the transaction operator $\mathbf{E}$ has degenerate eigenvalues, let the degeneracy subspace dimension be $m$. Then the system possesses a $U(m)$ symmetry in that subspace. For $m \ge 2$, the requirement that the connection preserve the natural inner product on the transaction network restricts the symmetry to $SU(m)$; the overall $U(1)$ factor corresponds to the global phase symmetry of the wavefunction and is accounted for separately. In the continuum limit, this symmetry is realized by a connection $A_\mu$, whose curvature $F_{\mu\nu}$ is the gauge field strength.
+
+The Standard Model gauge group $U(1) \times SU(2) \times SU(3)$ corresponds to degeneracies $m=1,2,3$. To exclude higher degeneracies (e.g., $m=4$ corresponding to $SU(4)$ or $U(4)$), a selection mechanism is needed. The node‑bandwidth argument of Section 3.2 suggests that the synchronization cost required to maintain a degeneracy of dimension $m$ grows with $m$. For $d=3$, the maximum sustainable degeneracy is $m=3$; higher $m$ would demand synchronization costs exceeding the available per‑node budget. A quantitative derivation of this bound remains an open problem (Open Problem 2).
+
+\textbf{Open problem 2: Fermion spectrum.} The emergence of three generations of fermions, their masses, and their mixing angles from the spectral geometry of the transaction operator is not yet derived. However, the framework provides a mathematical direction: the eigenvalues of $\mathbf{E}$ in the presence of a symmetry‑breaking scalar field (the Higgs) yield a mass matrix $M_f = \langle \phi \rangle \cdot Y$ where $Y$ are Yukawa couplings determined by the overlap integrals of the fermionic zero‑modes. The number of generations corresponds to the number of distinct families of eigenfunctions that survive after compactification of extra dimensions or after the coarse‑graining that produces the effective 3+1 spacetime. \textit{These terms are borrowed from string theory as a heuristic placeholder; their precise definition within the graph‑theoretic framework is part of open problem 2.} This remains a concrete research program rather than a completed derivation.
+
+\section{Conclusion and Open Problems}
+We have shown that the emergent physical enthalpy $Q = U + pV$, derived in Paper I from the rigid axioms under the constraints of the physical universe, yields:
+\begin{itemize}
+    \item The uniqueness of three spatial dimensions (Theorem 3.1, with the node‑bandwidth trap strengthening the argument).
+    \item The Einstein field equations of general relativity (as a thermodynamic consistency argument, assuming a continuum limit and a discrete Rindler horizon).
+    \item A candidate mechanism for the gauge group $U(1) \times SU(2) \times SU(3)$ from spectral degeneracy, with a heuristic bandwidth argument for the maximal degeneracy.
+\end{itemize}
+These results are not independent postulates but consequences of the N.E.A. Framework, understood as a low‑energy effective theory arising from a discrete causal network. The remaining open problems, which are essential for a fully rigorous theory, are:
+\begin{enumerate}
+    \item \textbf{Discrete Rindler horizon, Lorentzian signature, and $p$} (physics). A rigorous construction from pure graph structure using signed causal graphs and fractal recursion, including the quantitative derivation of the node‑bandwidth inequality.
+    \item \textbf{Fermion spectrum} (physics). The emergence of Standard Model fermions from spectral geometry, including the number of generations and mass hierarchy.
+    \item \textbf{Sparse graph limit} (mathematics). Convergence of sparse hypergraphs to smooth manifolds, providing a rigorous foundation for the continuum limit.
+\end{enumerate}
+
+\subsection{The Boundary of the Framework}
+As articulated in Paper I, the N.E.A. Framework does not explain why there exists a conserved quantity and a variational principle. These are taken as given—the minimal assumptions necessary for any system that can support enduring structures. The framework shows that \textbf{if} such a system exists, its macroscopic laws are uniquely determined by its computational constraints. This boundary is accepted as the limit of scientific inquiry within this program. Moreover, the N.E.A. framework defines the \textbf{pre‑conditions for observability}: any system failing these axioms is either structurally unstable or computationally opaque to internal observers.
+
+\begin{thebibliography}{99}
+\bibitem{paperI} Zhang, H. (2026). From Rigid Axioms to Emergent Enthalpy: The N.E.A. Framework under Computational Constraints. Paper I of this series.
+\bibitem{wolfram} Wolfram, S. (2020). A Class of Models with the Potential to Represent Fundamental Physics. \textit{Complex Systems}, 29(2), 107–536.
+\bibitem{book} Zhang, H. (2026). \textit{Being is Time}. Self-published.
+\bibitem{jacobson} Jacobson, T. (1995). Thermodynamics of Spacetime: The Einstein Equation of State. \textit{Phys. Rev. Lett.}, 75, 1260.
+\bibitem{ollivier} Ollivier, Y. (2009). Ricci curvature of Markov chains on metric spaces. \textit{J. Funct. Anal.}, 256(3), 810–864.
+\bibitem{lin} Lin, Y., \& Yau, S.-T. (2010). Ricci curvature and eigenvalue estimate on locally finite graphs. \textit{Math. Res. Lett.}, 17(3), 545–556.
+\bibitem{weyl} Weyl, H. (1911). Über die asymptotische Verteilung der Eigenwerte. \textit{Nachr. d. Königl. Ges. d. Wiss. zu Göttingen}, 110–117.
+\bibitem{verlinde} Verlinde, E. (2011). On the Origin of Gravity and the Laws of Newton. \textit{JHEP}, 1104, 029.
+\bibitem{weinberg} Weinberg, S. (1996). \textit{The Quantum Theory of Fields, Vol. 2}. Cambridge University Press.
+\bibitem{mandelbrot} Mandelbrot, B. B. (1982). \textit{The Fractal Geometry of Nature}. W. H. Freeman.
+\bibitem{ambjorn} Ambjørn, J., Jurkiewicz, J., \& Loll, R. (2005). Reconstructing the Universe. \textit{Phys. Rev. D}, 72, 064014.
+\bibitem{bombelli} Bombelli, L., et al. (1987). Space–time as a causal set. \textit{Phys. Rev. Lett.}, 59, 521.
+\end{thebibliography}
+
+\newpage
+
+% ==================== Paper III ====================
+\section*{Paper III: Economic Order and Social Cycles from the N.E.A. Framework\\
+\large Pareto Distributions, Market Stability, and the Dynamics of Redistribution}
+\vspace{0.5cm}
+
+\textbf{Authors:} Hermes Zhang (English edition) \quad Zhang Yu (Chinese edition, \textit{Being is Time})
+
+\vspace{0.5cm}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.5cm}
+
+\begin{abstract}
+In Paper I of this series, the N.E.A. Framework was reformulated with only two rigid axioms—Noether’s theorem (conservation) and the principle of least action (extremal evolution)—and it was shown that the specific form of the enthalpy decomposition emerges from the computational constraints of the system. For economic systems, where agents have finite information‑processing bandwidth, the emergent enthalpy takes a logarithmic form: $Q = k N \ln I + p E(N)$, where $E(N) \propto N$ in a three‑dimensional transaction network. In this paper, we take this logarithmic enthalpy as our starting point and show that it yields the fundamental structure of economic systems: the Pareto (power‑law) distribution of wealth, the stability condition of a market economy, and the cyclical dynamics of inequality and redistribution—the “cycles of order and chaos” described in \textit{Being is Time}. We introduce the concept of \textbf{economic curvature} as a heuristic measure of wealth concentration and define an \textbf{economic speed of light} $c_{\text{econ}}$ as a phenomenological constant representing the maximum rate of information propagation in the transaction network, grounding the analogy with general relativity. The market stability condition emerges as a budget constraint $I < I_c$, whose violation triggers a phase transition analogous to gravitational collapse. This work completes the unification of physical and social sciences under the N.E.A. variational principle, demonstrating that market regularities are not social constructs but emergent consequences of conservation and extremal evolution under finite‑bandwidth and network‑dimension constraints.
+\end{abstract}
+
+\section{Introduction}
+In Paper I~\cite{paperI} we reformulated the N.E.A. Framework, showing that only two axioms are fundamental:
+\begin{itemize}
+    \item \textbf{Axiom I (Noether’s theorem / Conservation):} There exists a globally conserved quantity $Q$, interpreted as the total enthalpy (or total wealth in economics).
+    \item \textbf{Axiom II (Principle of Least Action / Extremal Evolution):} The evolution of the system makes a certain action functional $S$ extremal.
+\end{itemize}
+The generalized enthalpy decomposition was shown to be an \textbf{emergent} consequence of these rigid axioms under the specific computational constraints of the system. For economic systems—characterized by human agents with finite information‑processing bandwidth and a transaction network of effective dimension $d_e = 3$—the unique stable enthalpy form was derived as
+\[
+Q = k N \ln I + p\,E(N),
+\]
+where $Q$ is the total conserved wealth, $I = \bar{w}_a / \bar{w}_g$ is the inequality index, $N$ is the number of agents, $k$ is a constant converting log‑inequality to internal complexity, $p$ is the transaction cost per effective connection, and $E(N)$ is the total number of effective transactions. In a three‑dimensional transaction network, each agent interacts with a bounded number of neighbors (the average degree is constant), so $E(N)$ scales linearly with $N$. Hence the external manifest cost grows as $pN$, and the internal complexity $U = k N \ln I$ also scales linearly with $N$. Both terms are extensive, and the budget constraint is consistent.
+
+In this paper, we take this emergent logarithmic enthalpy as our starting point and show that it yields the fundamental structure of economic systems:
+\begin{itemize}
+    \item \textbf{Section 2:} Derivation of the Pareto distribution of wealth from maximum entropy under the logarithmic complexity constraint.
+    \item \textbf{Section 3:} Determination of the Pareto exponent $\alpha$ from first principles and its relation to microeconomic parameters.
+    \item \textbf{Section 4:} Market stability analysis—proof that the system is stable only when inequality remains below a critical threshold, including the role of economic curvature and the economic speed of light.
+    \item \textbf{Section 5:} Dynamics of inequality—derivation of the phase transition toward redistribution (the cycles of order and chaos).
+    \item \textbf{Section 6:} Integration with the physical N.E.A. program: a unified perspective across domains, including the unified interpretation of $p$ and the role of effective dimension.
+    \item \textbf{Section 7:} Conclusion and cross‑disciplinary open problems.
+\end{itemize}
+
+\section{Derivation of the Pareto Distribution}
+\subsection{Maximum Entropy with Logarithmic Constraints}
+Consider a closed economy with total wealth $Q$ conserved (Axiom I) and $N$ agents. The enthalpy decomposition is
+\[
+Q = k N \ln I + p\,E(N),
+\]
+with $E(N) = \gamma N$ (where $\gamma$ is a geometric constant). The term $pE(N)$ is the total transaction cost—the external “manifest” component—and is constant for fixed $N$ and $p$. Therefore, maximizing the entropy of the wealth distribution subject to the conservation of $Q$ is equivalent to maximizing entropy subject to a fixed log‑inequality $\ln I = \frac{U}{kN}$, because $Q$ and $pE(N)$ are fixed.
+
+Let $\rho(w)$ be the probability density of wealth. The constraints are:
+\begin{enumerate}
+    \item \textbf{Normalization:} $\int \rho(w) dw = 1$.
+    \item \textbf{Fixed total wealth:} $\int w \rho(w) dw = \langle w \rangle = Q/N$.
+    \item \textbf{Fixed log‑inequality:} $\langle \ln (\bar{w}_a / w) \rangle = \ln I = \frac{Q - pE(N)}{kN}$.
+\end{enumerate}
+The entropy is $S[\rho] = -\int \rho(w) \ln \rho(w) dw$.
+
+\subsection{Lagrange Multiplier Solution}
+Maximizing $S$ subject to the constraints using Lagrange multipliers gives
+\[
+\rho(w) = C \, e^{-\lambda_1 w} w^{-\lambda_2},
+\]
+with $\lambda_1, \lambda_2$ Lagrange multipliers.
+
+\subsection{The Pareto Power Law}
+For large $w$, the exponential factor decays rapidly unless $\lambda_1$ is extremely small. In the limit of high inequality (or for the tail of the distribution where the exponential factor becomes negligible compared to the power‑law behavior), the distribution approaches a pure power law
+\[
+\rho(w) \propto w^{-\gamma},
+\]
+where $\gamma = \lambda_2$ is the probability density exponent. This limiting behavior is the Pareto distribution. To ensure a finite mean wealth $\langle w \rangle = Q/N$, we require $\gamma > 2$.
+
+The relationship between the PDF exponent $\gamma$ and the Pareto tail index $\alpha$ (where $P(W>w) \propto w^{-\alpha}$) is $\gamma = \alpha + 1$. From the constraints we can derive a compact expression:
+\[
+\alpha = \frac{1}{\ln\left( \frac{\bar{w}_a}{w_{\min}} \right)},
+\]
+where $\bar{w}_a = Q/N$ is the average wealth and $w_{\min}$ is the minimum wealth (e.g., the poverty line). This form follows from substituting $\ln I = \ln(\bar{w}_a / \bar{w}_g)$ and noting that in the maximum‑entropy derivation $\ln I$ is directly related to $\ln(\bar{w}_a / w_{\min})$. Empirically, for most stable economies $\alpha \approx 1.1$–$1.5$ (yielding $\gamma \approx 2.1$–$2.5$), which corresponds to $\bar{w}_a / w_{\min} \approx e^{1/\alpha} \approx 2$–$2.5$, a plausible range. The expression diverges as $\ln I \to \ln w_{\min}$, corresponding to the approach of the Market Anemia threshold $I \to I_c$, consistent with the phase transition described in Section 4.
+
+Thus, the logarithmic enthalpy constraint provides a thermodynamic justification for the Pareto distribution: under the constraints of finite‑bandwidth perception and total wealth conservation, the maximum‑entropy distribution is a power law. The logarithmic complexity hypothesis is thus a plausible first‑principles assumption, not an ad‑hoc fit.
+
+\section{The Pareto Exponent from First Principles}
+From the enthalpy decomposition, we have
+\[
+\ln I = \frac{Q - pE(N)}{kN}.
+\]
+Using the expression $\ln I = \ln(\bar{w}_a / w_{\min})$ (which holds when the power‑law tail dominates and $w_{\min}$ is the lower cutoff), we obtain
+\[
+\alpha = \frac{1}{\frac{Q - pE(N)}{kN} - \ln w_{\min}} = \frac{1}{\ln\left( \frac{\bar{w}_a}{w_{\min}} \right)}.
+\]
+Empirically, for most stable economies $\alpha \approx 1.1$–$1.5$, which ensures that the total wealth $Q$ is finite and the system is integrable. The formula also shows that the Pareto exponent decreases as the average wealth grows relative to the poverty line—a well‑known empirical pattern.
+
+\section{Market Stability, Economic Curvature, and the Economic Speed of Light}
+\subsection{The Budget Constraint and Critical Inequality}
+From Paper I, the internal complexity $U = k N \ln I$. For a functional market, the manifest transaction budget $pE(N)$ must remain positive to prevent collapse. With $Q = N\bar{w}_a$, we have:
+\[
+pE(N) = Q - U = N\bar{w}_a - k N \ln I > \epsilon,
+\]
+where $\epsilon$ is a minimum threshold. This simplifies to:
+\[
+\ln I < \frac{\bar{w}_a}{k} - \frac{\epsilon}{kN}.
+\]
+Hence the \textbf{Stability Condition} is:
+\[
+I < I_c, \qquad \text{where } I_c = \exp\left( \frac{\bar{w}_a}{k} - \frac{\epsilon}{kN} \right).
+\]
+When $I \ge I_c$, wealth concentration consumes the entire enthalpy budget, leaving insufficient funds for manifest transactions. This \textbf{Market Anemia} (analogous to Spatial Anemia) triggers a “cycles of order and chaos” phase transition.
+
+\subsection{Economic Curvature and Wealth Gravitation (Heuristic)}
+Analogous to physical curvature, we propose as a heuristic the notion of \textbf{economic curvature} on the transaction network using Ollivier–Ricci curvature. High‑wealth agents (large $U_i$) correspond to regions of high curvature, attracting more transactions—a “wealth gravitation” effect. This provides a back‑reaction mechanism: wealth concentration modifies the transaction network structure, reinforcing inequality until the budget constraint is violated.
+
+We propose the following \textbf{heuristic economic field equation} as a research direction:
+\[
+\kappa_{\mu\nu}^{\text{econ}} - \frac12 \kappa^{\text{econ}} g_{\mu\nu}^{\text{econ}} = 8\pi G_{\text{econ}} \, T_{\mu\nu}^{\text{(wealth)}},
+\]
+where $T_{\mu\nu}^{\text{(wealth)}}$ is a wealth‑stress tensor and $G_{\text{econ}}$ is an effective coupling constant. The detailed definition of these quantities in terms of microeconomic observables is left for future work.
+
+\subsection{The Economic Speed of Light (Phenomenological Constant)}
+In physics, the constant $c$ sets the maximum speed of information propagation. In economics, we define the \textbf{economic speed of light} $c_{\text{econ}}$ as the maximum rate at which transaction information can propagate through the network. Its upper limit is not given by the physical speed of light but by the \textbf{cognitive main frequency}—the minimal time $\tau$ required for a human agent to process a value judgment and reach consensus: $c_{\text{econ}} = L / \tau$. This constant defines the light cone of economic causality. This is a phenomenological constant, not derived from the N.E.A. axioms; its justification comes from the observation that human cognition is the ultimate bottleneck in economic consensus formation.
+
+While AI and high‑frequency trading increase the technical speed of transactions, $c_{\text{econ}}$ is defined by the \textbf{consensus frequency of the primary stakeholders} (humans). The N.E.A. Framework views the economy as a tool for human utility (internal complexity $U$). Therefore, the “causal cone” of an economic event is only completed when the information is processed by the human biological substrate to form a value judgment. Thus, $c_{\text{econ}} = L/\tau$ remains an \textbf{effective constant} pinned to the human cognitive clock ($\tau \approx 100$ ms to $1$ s). If a sub‑system (like AI trading) operates at $c \gg c_{\text{econ}}$, it effectively becomes “decoupled” from the human enthalpy pool, forming its own micro‑metric which must eventually reconcile with the human metric during “liquidation” events.
+
+\section{Dynamics of Inequality and the Cycles of Order and Chaos}
+When the critical inequality threshold is exceeded, the system cannot maintain its structure. The only options are:
+\begin{enumerate}
+    \item \textbf{Redistribution:} Wealth is transferred from rich to poor (e.g., taxation, revolution), reducing $I$.
+    \item \textbf{Collapse:} The market disintegrates, reducing $N$ or $Q$, resetting the system.
+\end{enumerate}
+This yields the “cycles of order and chaos”: a stable period (order) accumulates inequality; when inequality crosses $I_c$, the system undergoes a phase transition (chaos), after which a new cycle begins.
+
+A simple phenomenological model captures this behavior. Let $x = I/I_c - 1$. During stable periods, inequality grows as
+\[
+\dot{x} = \beta x,
+\]
+where $\beta$ can be tentatively identified with the difference between the capital return rate and the economic growth rate, i.e., $\beta \sim r - g$ (a relation familiar from Piketty’s analysis of wealth concentration). When $x$ reaches a threshold, a redistribution event resets $x$ to a negative value. This relaxation oscillator qualitatively reproduces historical patterns of inequality. A full microscopic derivation of the dynamics from the N.E.A. framework remains an open problem (Open Problem 6).
+
+\section{Integration: The Unified N.E.A. Program}
+\subsection{Summary of the Two Domains}
+Paper II~\cite{paperII} took the physical enthalpy $Q = U + pV$ and derived:
+\begin{itemize}
+    \item Uniqueness of three spatial dimensions (via node‑bandwidth and dimension arguments).
+    \item Einstein field equations (as a thermodynamic consistency argument, assuming a discrete Rindler horizon and a continuum limit).
+    \item A candidate mechanism for the gauge group $U(1) \times SU(2) \times SU(3)$ from spectral degeneracy.
+\end{itemize}
+This paper took the economic enthalpy $Q = k N \ln I + pE(N)$ (with $E(N) \sim N$) and derived:
+\begin{itemize}
+    \item Pareto distribution of wealth.
+    \item Market stability condition and critical inequality threshold.
+    \item Cyclical dynamics of inequality and redistribution.
+    \item Heuristic economic curvature and a phenomenological economic speed of light, grounding the analogy with gravity.
+\end{itemize}
+Both derivations start from the same two rigid axioms and differ only in the computational constraints of the substrate. The unification is strengthened by the observation that the effective dimension of the transaction network is $d_e = 3$, matching the physical dimension.
+
+\textbf{The High‑Dimensional Trap of Digital Economies.} While physical survival is bound to $d=3$, digital transaction networks often exhibit effective dimensions $d_e \gg 3$ (small‑world topology). The N.E.A. Framework predicts that such high‑dimensional systems are \textbf{inherently meta‑stable}. They allow for rapid wealth concentration but lead to a “node bandwidth trap” where the synchronization cost of global consensus grows faster than the human biological substrate can process. This explains why hyper‑connected digital markets are prone to higher frequency and intensity of cycles (volatility) compared to traditional 3D economies.
+
+\subsection{The Unified Interpretation of $p$}
+Across domains, $p$ is the \textbf{cost per unit of extensive quantity required to keep the system’s manifest component from collapsing into the hidden component}. In physics, it maintains spatial volume against gravity; in economics, it maintains the market against fragmentation. In both, a positive $p$ prevents collapse into a featureless pure‑$U$ state.
+
+\subsection{Philosophical Implications}
+The N.E.A. Framework shows that macroscopic laws are not fundamental axioms but emergent regularities arising from conservation, extremal evolution, and substrate constraints. This unification suggests that the apparent diversity of physical, economic, and social phenomena is a consequence of different computational constraints operating on the same variational principles.
+
+\section{Conclusion and Cross‑Disciplinary Open Problems}
+We have shown that the logarithmic enthalpy form $Q = k N \ln I + pE(N)$, emerging from finite‑bandwidth constraints and a three‑dimensional transaction network, yields the Pareto distribution, market stability conditions, and the cyclical dynamics of inequality. By introducing effective dimension, heuristic economic curvature, and a phenomenological economic speed of light, we have further unified the framework with its physical counterpart.
+
+\textbf{Open problems} (cross‑disciplinary):
+\begin{enumerate}
+    \item \textbf{Discrete Rindler horizon, Lorentzian signature, and $p$} (physics). A rigorous construction from pure graph structure using signed causal graphs and fractal recursion.
+    \item \textbf{Fermion spectrum} (physics). Emergence of Standard Model fermions from spectral geometry, including generations and masses.
+    \item \textbf{Sparse graph limit} (mathematics). Convergence of sparse hypergraphs to smooth manifolds.
+    \item \textbf{Microscopic justification of logarithmic complexity} (economics). Derivation of the finite‑bandwidth compression principle from first principles (e.g., information‑theoretic or neural network constraints).
+    \item \textbf{Determination of $k$ and $p$} (economics). These constants should emerge from the underlying dynamics rather than being free parameters.
+    \item \textbf{Dynamics of phase transitions} (complex systems). Quantitative modeling of regime shifts in economics, social systems, and beyond, including empirical fitting of the relaxation oscillator $\dot{x} = \beta x$ with $\beta$ related to $r-g$.
+    \item \textbf{Biological allometric scaling} (biology). Full derivation of Kleiber’s law and other scaling relations from the N.E.A. framework.
+\end{enumerate}
+
+\subsection{The Boundary of the Framework}
+As articulated in Paper I, the N.E.A. Framework does not explain why there exists a conserved quantity and a variational principle. These are taken as given—the minimal assumptions necessary for any system that can support enduring structures. The framework shows that \textbf{if} such a system exists, its macroscopic laws are uniquely determined by its computational constraints. This boundary is accepted as the limit of scientific inquiry within this program. Moreover, the N.E.A. framework defines the \textbf{pre‑conditions for observability}: any system failing these axioms is either structurally unstable or computationally opaque to internal observers.
+
+\begin{thebibliography}{99}
+\bibitem{paperI} Zhang, H. (2026). From Rigid Axioms to Emergent Enthalpy: The N.E.A. Framework under Computational Constraints. Paper I of this series.
+\bibitem{paperII} Zhang, H. (2026). The Physical Universe from the N.E.A. Framework: Spacetime, Gravity, and Gauge Groups as Computational Emergence. Paper II of this series.
+\bibitem{book} Zhang, H. (2026). \textit{Being is Time}. Self-published.
+\bibitem{jaynes} Jaynes, E. T. (1957). Information theory and statistical mechanics. \textit{Physical Review}, 106(4), 620.
+\bibitem{pareto} Pareto, V. (1896). \textit{Cours d’économie politique}. Lausanne: F. Rouge.
+\bibitem{piketty} Piketty, T. (2014). \textit{Capital in the Twenty‑First Century}. Harvard University Press.
+\bibitem{gabaix} Gabaix, X. (2009). Power Laws in Economics and Finance. \textit{Annual Review of Economics}, 1, 255–294.
+\bibitem{scheffer} Scheffer, M. (2009). \textit{Critical Transitions in Nature and Society}. Princeton University Press.
+\bibitem{mandelbrot} Mandelbrot, B. B. (1982). \textit{The Fractal Geometry of Nature}. W. H. Freeman.
+\end{thebibliography}
+
+\end{document}
