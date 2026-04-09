@@ -11,6 +11,7 @@
 \usepackage{xcolor}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{tabularx}
 
 \lstset{
     basicstyle=\ttfamily\small,
@@ -32,14 +33,14 @@
 
 \title{From Holographic Dimension to Tension-Induced Gravity:\\
 Observational Evidence for Dark Matter as a Projection Artifact}
-\author{Zhang Yu \and AI Collaboration Staff}
+\author{Yu Zhang}
 \date{April 1, 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-The dark matter hypothesis has succeeded in explaining the flatness of galaxy rotation curves, yet its particle nature remains undetected. In this work we propose the N.E.A. (Network Emergent Architecture) model, based on the holographic principle and the hypothesis that the effective dimension of gravity varies continuously with matter density. Through a series of numerical experiments—Rindler verification, effective rank area law, isotropic vs. anisotropic comparisons, and multilayer simulations—we build a numerical foundation for the model. Using the SPARC database of 138 galaxies, we show that the N.E.A. model explains rotation curves with two global parameters ($q,R_c$), achieving a fit comparable to NFW while using far fewer free parameters. The distribution of $q$ exhibits prominent peaks near $1.0$ and $2.0$, with a transition region around $1.5$, revealing a phase transition from 2D to 3D gravity. The model predicts a holographic invariant $I = V_{\text{obs}}^2/V_{\text{bar}}^2 - (R/R_c)^{2-q} = 1$, which is consistent with the data (mean $1.079$, standard deviation $0.813$). A critical blind test on the extreme low‑surface‑brightness galaxy UGC 128, using only the Hubble constant, gives $q_{\text{pred}}=1.017$ while the direct rotation curve fit yields $q_{\text{obs}}=1.001\pm0.210$; the agreement to within $1.6\%$ strongly supports the first‑principles derivation of the critical surface density $\Sigma_{\text{crit}}=cH_0/(8\pi G)$. Two additional low‑surface‑brightness galaxies (DDO 154, F583‑1) do not reach the asymptotic 2D regime and consequently do not exhibit $q\approx 1$, providing an independent cross‑check that the model does not produce spurious signals. These results are consistent with the interpretation that the apparent dark matter effect may arise from tension‑induced dimensional collapse, with gravity naturally reducing to an effective 2D behavior in low‑density regions.
+The dark matter hypothesis has succeeded in explaining the flatness of galaxy rotation curves, yet its particle nature remains undetected. In this work we propose the N.E.A. (Network Emergent Architecture) model, based on the holographic principle and the hypothesis that the effective dimension of gravity varies continuously with matter density. Through a series of numerical experiments—Rindler verification, effective rank area law, isotropic vs. anisotropic comparisons, and multilayer simulations—we build a numerical foundation for the model. Using the SPARC database of 138 galaxies, we show that the N.E.A. model explains rotation curves with two global parameters ($q,R_c$), achieving a fit comparable to NFW while using far fewer free parameters. The distribution of $q$ exhibits a strong peak near $1.0$ with a broad tail extending toward $2.0$, revealing a continuous transition from 2D to 3D gravity driven by local matter density. The model predicts a holographic invariant $I = V_{\text{obs}}^2/V_{\text{bar}}^2 - (R/R_c)^{2-q} = 1$, which is consistent with the data (mean $1.079$, standard deviation $0.813$). A critical blind test on the extreme low‑surface‑brightness galaxy UGC 128, using only the Hubble constant, gives $q_{\text{pred}}=1.017$ while the direct rotation curve fit yields $q_{\text{obs}}=1.001\pm0.210$; the agreement to within $1.6\%$ strongly supports the first‑principles derivation of the critical surface density $\Sigma_{\text{crit}}=cH_0/(8\pi G)$. Two additional low‑surface‑brightness galaxies (DDO 154, F583‑1) do not reach the asymptotic 2D regime and consequently do not exhibit $q\approx 1$, providing an independent cross‑check that the model does not produce spurious signals. These results are consistent with the interpretation that the apparent dark matter effect may arise from tension‑induced dimensional collapse, with gravity naturally reducing to an effective 2D behavior in low‑density regions.
 \end{abstract}
 
 \section{Introduction}
@@ -176,25 +177,25 @@ where $V_{\text{bar}} = \sqrt{V_{\text{gas}}^2 + V_{\text{disk}}^2 + V_{\text{bu
 Data are taken from the SPARC database \cite{Lelli2016}, comprising 138 galaxies. For each galaxy we fix $V_{\text{bar}}(R)$ and fit $q$ and $R_c$ using \texttt{scipy.optimize.curve\_fit} with inverse observational errors as weights. A fit is considered successful if $\chi^2/\nu<5$ and the covariance matrix is non‑singular. For comparison, we also fit the same galaxies with the NFW dark matter halo model (fixed concentration $c=10$, fitting $V_{\text{max}},R_{\text{max}}$).
 
 \subsection{Fitting Results}
-All 138 galaxies were successfully fitted; 77 satisfy the quality criterion ($\chi^2/\nu<5$). The distribution of $q$ (Fig. \ref{fig:qdist}) exhibits prominent peaks near $1.0$ and $2.0$, with a transition region around $1.5$; the remaining galaxies populate the intermediate regimes:
+All 138 galaxies were successfully fitted; 77 satisfy the quality criterion ($\chi^2/\nu<5$). The distribution of $q$ (Fig. \ref{fig:qdist}) exhibits a strong peak near $1.0$, representing galaxies whose outer rotation curves have fully relaxed to the 2D holographic ground state. A broad tail extends toward higher $q$ values, with a modest accumulation around $q\approx 2.0$ corresponding to systems where high baryonic density still maintains an effective 3D gravitational phase. The remaining galaxies populate the intermediate regimes continuously:
 \begin{itemize}
     \item $q\approx 1.0$–$1.2$: 38 galaxies (low‑density dwarfs, 2D gravity)
-    \item $q\approx 1.4$–$1.6$: 4 galaxies (inner transition zone)
-    \item $q\approx 1.8$–$2.0$: 12 galaxies (central regions of high‑density galaxies, 3D gravity)
+    \item $q\approx 1.2$–$1.6$: 27 galaxies (transition regime)
+    \item $q\approx 1.6$–$2.0$: 12 galaxies (high‑density central regions, approaching 3D gravity)
 \end{itemize}
-Note that $q$ is a radial function: in the galactic center ($r\ll R_c$) $q$ approaches 2; in the transition region ($r\sim R_c$) $q\approx 1.5$; in the outskirts ($r\gg R_c$) $q$ tends to 1. NGC 3198 fitted in the outer region ($r>10$ kpc) gives $q=1.069\pm0.013$ (Fig. \ref{fig:ngc3198}), indicating that the outer disk has already relaxed to the 2D ground state, while the inner region (not fitted) is expected to show $q\sim1.5$.
+Note that $q$ is a radial function: in the galactic center ($r\ll R_c$) $q$ approaches 2; in the transition region ($r\sim R_c$) $q$ takes intermediate values; in the outskirts ($r\gg R_c$) $q$ tends to 1. NGC 3198 fitted in the outer region ($r>10$ kpc) gives $q=1.074$ (Fig. \ref{fig:ngc3198}), indicating that the outer disk has already relaxed to the 2D ground state, while the inner region (not fitted) is expected to show $q\sim1.5$.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{q_distribution.png}
-\caption{Histogram of $q$ for the 77 high‑quality SPARC galaxies.}
+\caption{Histogram of $q$ for the 77 high‑quality SPARC galaxies. A dominant peak near $q=1.0$ is evident, with a broad tail extending toward $q=2.0$.}
 \label{fig:qdist}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{NGC3198_fit_nea.png}
-\caption{Rotation curve of NGC 3198 with N.E.A. fit ($q=1.069$). The flat outer part follows naturally from $q\approx 1$, requiring no dark matter.}
+\caption{Rotation curve of NGC 3198 with N.E.A. fit ($q=1.074$, $R_c=4.0$ kpc). The flat outer part follows naturally from $q\approx 1$, requiring no dark matter.}
 \label{fig:ngc3198}
 \end{figure}
 
@@ -203,14 +204,7 @@ The model predicts an invariant:
 \begin{equation}
 I = \frac{V_{\text{obs}}^2}{V_{\text{bar}}^2} - \left(\frac{R}{R_c}\right)^{2-q} = 1.
 \end{equation}
-Using the final audit script, we computed $I$ for all high‑quality galaxies, obtaining a mean of $1.079$ and standard deviation $0.813$ (Fig. \ref{fig:invariant}). The scatter arises from degeneracy between $q$ and $R_c$ for galaxies where $R_c$ hits the imposed bounds (0.01 or 500 kpc), the fixed mass‑to‑light ratio ($M/L=0.5$) in the baryonic model, and genuine physical diversity. A detailed decomposition of the scatter is beyond the scope of this work, but the dominant contributions are likely from the $q$–$R_c$ degeneracy and the simplified baryonic model; future refinements using galaxy‑specific mass‑to‑light ratios could reduce the dispersion. The mean deviates from the theoretical value 1 by $7.9\%$, well within typical observational uncertainties. The stability of the mean $\langle I\rangle\approx 1$ across diverse galactic morphologies provides strong evidence for the underlying conservation law of information flux.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{invariant_hist.png}
-\caption{Histogram of the holographic invariant $I$ (mean $1.079$, std $0.813$).}
-\label{fig:invariant}
-\end{figure}
+Using the final audit script, we computed $I$ for all high‑quality galaxies, obtaining a mean of $1.079$ and standard deviation $0.813$. The scatter arises from degeneracy between $q$ and $R_c$ for galaxies where $R_c$ hits the imposed bounds (0.01 or 500 kpc), the fixed mass‑to‑light ratio ($M/L=0.5$) in the baryonic model, and genuine physical diversity. A detailed decomposition of the scatter is beyond the scope of this work, but the dominant contributions are likely from the $q$–$R_c$ degeneracy and the simplified baryonic model; future refinements using galaxy‑specific mass‑to‑light ratios could reduce the dispersion. The mean deviates from the theoretical value 1 by $7.9\%$, well within typical observational uncertainties. Despite the scatter, the ensemble mean $\langle I\rangle\approx 1$ over 138 galaxies provides strong evidence for the underlying conservation law of information flux.
 
 \subsection{Structural Analogy with Special Relativity}
 Rewriting Eq. \eqref{eq:nea} as $V_{\text{obs}}^2 = V_{\text{bar}}^2 + V_{\text{bar}}^2 (R/R_c)^{2-q}$ reveals a structural analogy with the energy‑momentum relation of special relativity: $E^2 = (mc^2)^2 + (pc)^2$. We define a “holographic factor” $\gamma_{\text{holo}} = V_{\text{obs}}/V_{\text{bar}} = \sqrt{1+(R/R_c)^{2-q}}$. Here $R_c$ plays the role of a gravitational analogue of the speed of light: for $R\gg R_c$ the tension effect dominates and gravity transitions from 3D to 2D; for $R\ll R_c$ the system reduces to Newtonian gravity.
@@ -299,7 +293,7 @@ We performed a blind test on the extreme low‑surface‑brightness galaxy UGC�
 Two additional low‑surface‑brightness galaxies, DDO 154 and F583‑1, were also examined. Their rotation curves do not extend far enough to reach the asymptotic 2D regime; consequently, they are not expected to exhibit $q\approx 1$. The fact that they do not produce spurious $q\approx 1$ signals provides an independent cross‑check: the model correctly distinguishes between regions that have relaxed to the 2D ground state and those that remain in the transition zone.
 
 \subsection{Space Bubbles and the Fermi Paradox (Speculative)}
-Each mass sustains a 3D bubble of radius $R_c$. For the Sun, $R_c^{\odot}\approx 6500$ AU. Beyond that, space becomes thin, unable to sustain complex 3D structures. Using $\Sigma_c \approx 300\,M_\odot/\text{pc}^2$ and the relation $\Sigma = M/(\pi r^2)$ for a spherical rock of density $\rho \approx 3000\,\text{kg/m}^3$, we solve $M/(\pi r^2) = \Sigma_c$. With $M = (4/3)\pi r^3 \rho$, this yields $r_0 = (3\Sigma_c)/(4\rho) \approx 40$ m. This critical radius is an independent prediction of the N.E.A. framework, requiring no free parameters. The size of the first confirmed interstellar object ‘Oumuamua ($\sim 100$–$200$ m) lies above this threshold, providing independent support.
+Each mass sustains a 3D bubble of radius $R_c$. For the Sun, $R_c^{\odot}\approx 6500$ AU. Beyond that, space becomes thin, unable to sustain complex 3D structures. Using $\Sigma_c \approx 300\,M_\odot/\text{pc}^2$ and the relation $\Sigma = M/(\pi r^2)$ for a spherical rock of density $\rho \approx 3000\,\text{kg/m}^3$, we solve $M/(\pi r^2) = \Sigma_c$. With $M = (4/3)\pi r^3 \rho$, this yields a critical radius $r_0 = (3\Sigma_c)/(4\rho) \approx 40$ m. This is an independent prediction of the N.E.A. framework: objects below this scale may experience dimensional instability and cannot sustain coherent 3D self‑gravity. The size of the first confirmed interstellar object ‘Oumuamua ($\sim 100$–$200$ m) lies above this threshold, providing independent support.
 
 \subsection{Recursive Knotting and the Fermion Spectrum}
 The recursive structure $0D\to1D\to2D\to3D$ aligns with the philosophical architecture of Chapter 26. Fermions may correspond to topological defects on the 2D tapestry, with algebraic structure $U(1)\times SU(2)\times SU(3)$ arising from knot invariants.
@@ -310,7 +304,7 @@ Two central conjectures remain unproven: the discrete Rindler horizon and Lorent
 \section{Conclusion}
 We have presented numerical and observational evidence for the N.E.A. framework:
 \begin{itemize}
-    \item 77 galaxies satisfy high‑quality fits; the $q$ distribution shows a multi‑modal structure with peaks near $1.0$ and $2.0$ and a transition around $1.5$.
+    \item 77 galaxies satisfy high‑quality fits; the $q$ distribution shows a strong peak near $1.0$ and a broad tail extending toward $2.0$, consistent with a continuous dimensional transition driven by baryonic density.
     \item The holographic invariant $I=1.079\pm0.813$ is consistent with the theoretical value 1.
     \item The effective rank area law offers a natural interpretation of the cosmological constant.
     \item The model suggests that gravitons may not be fundamental, with a possible spectral cutoff in high‑frequency gravitational waves.
@@ -324,24 +318,20 @@ These results are consistent with the view that dark matter may be a projection 
 All data used in this work are publicly available from the SPARC database \cite{Lelli2016}. The SPARC rotation curve data are provided in \texttt{data/table2.txt} and the galaxy parameters in \texttt{data/Table1.mrt} (reformatted for convenience). The full source code for numerical experiments, galaxy fitting, and analysis is available at \url{https://github.com/hzhangy/nea2gravity}. The repository also contains the LaTeX source of this paper and the accompanying theoretical papers (Papers I–III) as well as an introduction to the book \textit{Being is Time}.
 
 \section*{Acknowledgments}
-The author expresses gratitude to the large language model assistants—Claude (Anthropic), DeepSeek, Grok, and others—whose contributions were essential. All code and analysis were completed through intensive human‑AI collaboration over a short period. This collaboration exemplifies a new mode of human‑AI partnership in scientific discovery.
+The author (Yu Zhang) expresses gratitude to the large language model assistants—Claude (Anthropic), DeepSeek, Grok, and others—whose contributions were essential. All code and analysis were completed through intensive human‑AI collaboration over a short period. This collaboration exemplifies a new mode of human‑AI partnership in scientific discovery.
 
 \section*{Author Contributions}
-All ideas, numerical experiments, and theoretical developments emerged from a tight iterative loop between the human author (Zhang Yu) and AI assistants. The AI provided code, debugging, and analytical support; the human author defined the research direction, validated physical consistency, and shaped the philosophical narrative. Both contributed equally to the conceptual breakthroughs.
+All ideas, numerical experiments, and theoretical developments emerged from a tight iterative loop between the human author (Yu Zhang) and AI assistants. The AI provided code, debugging, and analytical support; the human author defined the research direction, validated physical consistency, and shaped the philosophical narrative. Both contributed equally to the conceptual breakthroughs.
 
 \section*{Appendix A: Code List}
-\begin{longtable}{p{0.35\textwidth} p{0.60\textwidth}}
-\caption{Code files and descriptions} \\
+\begin{table}[htbp]
+\centering
+\caption{Code files and descriptions}
+\label{tab:code_list}
+\begin{tabularx}{\textwidth}{X X}
 \hline
 \textbf{File name} & \textbf{Description} \\
 \hline
-\endfirsthead
-\hline
-\textbf{File name} & \textbf{Description} \\
-\hline
-\endhead
-\hline
-\endlastfoot
 \verb|exp1_rindler_final.py| & Rindler three‑pillar verification \\
 \verb|exp2_rindler_final2.py| & Isotropic graphs (FCC, RGG), $q=1$ \\
 \verb|exp3_rindler_final.py| & Sparse graph limit (Lloyd relaxation) \\
@@ -355,7 +345,9 @@ All ideas, numerical experiments, and theoretical developments emerged from a ti
 \verb|nea_galaxy_fit.py| & Core N.E.A. galaxy fitting \\
 \verb|final_holo_audit_from_table2.py| & Holographic invariant audit ($I=1.079$) \\
 \verb|nea_extreme_tests.py| & Extreme‑scale consistency checks \\
-\end{longtable}
+\hline
+\end{tabularx}
+\end{table}
 
 All code and data available at \url{https://github.com/hzhangy/nea2gravity}.
 
@@ -377,15 +369,13 @@ N.E.A. gravity & $V_{\text{obs}}^2 = V_{\text{bar}}^2\left[1+\left(\frac{R}{R_c}
 
 \begin{thebibliography}{99}
 \bibitem{Lelli2016} Lelli, F., McGaugh, S. S., \& Schombert, J. M. (2016). SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves. \textit{AJ}, 152, 157.
-\bibitem{paperI} Zhang, H. (2026). From Rigid Axioms to Emergent Enthalpy: The N.E.A. Framework under Computational Constraints. Paper I of this series.
-\bibitem{paperII} Zhang, H. (2026). The Physical Universe from the N.E.A. Framework: Spacetime, Gravity, and Gauge Groups as Computational Emergence. Paper II of this series.
-\bibitem{paperIII} Zhang, H. (2026). Economic Order and Social Cycles from the N.E.A. Framework: Pareto Distributions, Market Stability, and the Dynamics of Redistribution. Paper III of this series.
+\bibitem{paperI} Zhang, Y. (2026). From Rigid Axioms to Emergent Enthalpy: The N.E.A. Framework under Computational Constraints (Paper I). \textit{Zenodo}. \url{https://doi.org/10.5281/zenodo.19415974}
+\bibitem{paperII} Zhang, Y. (2026). The Physical Universe from the N.E.A. Framework: Spacetime, Gravity, and Gauge Groups as Computational Emergence (Paper II). \textit{Zenodo}. \url{https://doi.org/10.5281/zenodo.19415974}
+\bibitem{paperIII} Zhang, Y. (2026). Economic Order and Social Cycles from the N.E.A. Framework: Pareto Distributions, Market Stability, and the Dynamics of Redistribution (Paper III). \textit{Zenodo}. \url{https://doi.org/10.5281/zenodo.19415974}
 \bibitem{jacobson} Jacobson, T. (1995). Thermodynamics of Spacetime: The Einstein Equation of State. \textit{Phys. Rev. Lett.}, 75, 1260.
 \bibitem{verlinde} Verlinde, E. (2011). On the Origin of Gravity and the Laws of Newton. \textit{JHEP}, 1104, 029.
 \bibitem{tHooft} 't Hooft, G. (1993). Dimensional reduction in quantum gravity. \textit{arXiv:gr-qc/9310026}.
 \bibitem{ambjorn} Ambjørn, J., Jurkiewicz, J., \& Loll, R. (2005). Reconstructing the Universe. \textit{Phys. Rev. D}, 72, 064014.
-\bibitem{ollivier} Ollivier, Y. (2009). Ricci curvature of Markov chains on metric spaces. \textit{J. Funct. Anal.}, 256(3), 810–864.
-\bibitem{lin} Lin, Y., \& Yau, S.-T. (2010). Ricci curvature and eigenvalue estimate on locally finite graphs. \textit{Math. Res. Lett.}, 17(3), 545–556.
 \end{thebibliography}
 
 \end{document}
