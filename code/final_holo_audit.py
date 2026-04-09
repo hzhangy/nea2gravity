@@ -8,33 +8,25 @@ warnings.filterwarnings('ignore')
 
 # ========== 1. 按字节解析 Table1.mrt ==========
 def parse_table1_fixed(filename):
-    """严格按照字节位置解析，只保留数据行"""
     gal_data = {}
-    with open(filename, 'r') as f:
+    with open(filename, 'r', encoding='utf-8') as f:
         for line in f:
-            # 确保行长度足够
-            if len(line) < 85:
+            line = line.strip()
+            if not line or line.startswith(('Name', '---', 'Byte')):
+                continue
+            parts = line.split()
+            if len(parts) < 10:
+                continue
+            name = parts[0]
+            if name[0].isdigit():
                 continue
             try:
-                # 按字节偏移提取字段（Python 索引从 0 开始，官方描述从 1 开始，需减 1）
-                name = line[0:11].strip()           # 1-11
-                # 跳过明显不是星系名的行
-                if not name or name.startswith('-') or name[0].isdigit():
-                    continue
-                # 提取数值字段
-                dist = float(line[13:19].strip())   # 14-19
-                lum = float(line[34:41].strip())    # 35-41
-                reff = float(line[48:53].strip())   # 49-53
-                mhi = float(line[74:81].strip())    # 75-81
-                
-                gal_data[name] = {
-                    'D': dist,
-                    'L36': lum * 1e9,      # 转为太阳光度
-                    'Reff': reff,          # kpc
-                    'MHI': mhi * 1e9       # 转为太阳质量
-                }
-            except (ValueError, IndexError):
-                # 解析失败则跳过该行（可能是注释或表头）
+                dist = float(parts[1])
+                lum = float(parts[4])
+                reff = float(parts[5])
+                mhi = float(parts[9])
+                gal_data[name] = {'D': dist, 'L36': lum*1e9, 'Reff': reff, 'MHI': mhi*1e9}
+            except:
                 continue
     return gal_data
 
@@ -68,7 +60,7 @@ def final_audit():
     print(f"旋转曲线数据成功映射 {len(raw)} 行，{raw['Galaxy'].nunique()} 个星系")
 
     # 读取 N.E.A. 拟合结果
-    fit = pd.read_csv('nea_hd_fit_corrected.csv')
+    fit = pd.read_csv('nea_hd_fit.csv')
     fit['Galaxy'] = fit['Galaxy'].astype(str).str.strip()
     good = fit[(fit['chi2_red'] < 5) & (fit['cov_ok'] == True)].copy()
     print(f"N.E.A. 拟合成功: {len(fit)} 星系, 质量良好: {len(good)} 星系")
