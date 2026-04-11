@@ -33,18 +33,18 @@
 
 \title{From Holographic Dimension to Tension-Induced Gravity:\\
 Observational Evidence for Dark Matter as a Projection Artifact}
-\author{Yu Zhang}
+\author{Yu Zhang\\ \texttt{zhangyu15@tsinghua.org.cn}}
 \date{April 1, 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-The dark matter hypothesis has succeeded in explaining the flatness of galaxy rotation curves, yet its particle nature remains undetected. In this work we propose the N.E.A. (Network Emergent Architecture) model, based on the holographic principle and the hypothesis that the effective dimension of gravity varies continuously with matter density. Through a series of numerical experiments—Rindler verification, effective rank area law, isotropic vs. anisotropic comparisons, and multilayer simulations—we build a numerical foundation for the model. Using the SPARC database of 138 galaxies, we show that the N.E.A. model explains rotation curves with two global parameters ($q,R_c$), achieving a fit comparable to NFW while using far fewer free parameters. The distribution of $q$ exhibits a strong peak near $1.0$ with a broad tail extending toward $2.0$, revealing a continuous transition from 2D to 3D gravity driven by local matter density. The model predicts a holographic invariant $I = V_{\text{obs}}^2/V_{\text{bar}}^2 - (R/R_c)^{2-q} = 1$, which is consistent with the data (mean $1.079$, standard deviation $0.813$). A critical blind test on the extreme low‑surface‑brightness galaxy UGC 128, using only the Hubble constant, gives $q_{\text{pred}}=1.017$ while the direct rotation curve fit yields $q_{\text{obs}}=1.001\pm0.210$; the agreement to within $1.6\%$ strongly supports the first‑principles derivation of the critical surface density $\Sigma_{\text{crit}}=cH_0/(8\pi G)$. Two additional low‑surface‑brightness galaxies (DDO 154, F583‑1) do not reach the asymptotic 2D regime and consequently do not exhibit $q\approx 1$, providing an independent cross‑check that the model does not produce spurious signals. These results are consistent with the interpretation that the apparent dark matter effect may arise from tension‑induced dimensional collapse, with gravity naturally reducing to an effective 2D behavior in low‑density regions.
+The dark matter hypothesis has succeeded in explaining the flatness of galaxy rotation curves, yet its particle nature remains undetected. In this work we propose the N.E.A. (Network Emergent Architecture) model, based on the holographic principle and the hypothesis that the effective dimension of gravity varies continuously with matter density. Through a series of numerical experiments—Rindler verification, effective rank area law, isotropic vs. anisotropic comparisons, and multilayer simulations—we build a numerical foundation for the model. Using the SPARC database of 138 galaxies, we show that the N.E.A. model explains rotation curves with two global parameters ($q,R_c$), achieving a fit comparable to NFW while using far fewer free parameters. The distribution of $q$ exhibits a strong peak near $1.0$ with a broad tail extending toward $2.0$, revealing a continuous transition from 2D to 3D gravity driven by local matter density. The model predicts a holographic invariant $I = V_{\text{obs}}^2/V_{\text{bar}}^2 - (R/R_c)^{2-q} = 1$, which is consistent with the data (mean $1.079$, standard deviation $0.813$). A critical blind test on the extreme low‑surface‑brightness galaxy UGC 128, using only the Hubble constant, gives $q_{\text{pred}}=1.017$ while the direct rotation curve fit yields $q_{\text{obs}}=1.001\pm0.210$; the agreement to within $1.6\%$ strongly supports the first‑principles derivation of the critical surface density $\Sigma_{\text{crit}}=cH_0/(8\pi G)$. Two additional low‑surface‑brightness galaxies (DDO 154, F583‑1) do not reach the asymptotic 2D regime and consequently do not exhibit $q\approx 1$, providing an independent cross‑check that the model does not produce spurious signals. These results are consistent with the interpretation that the apparent dark matter effect may arise from tension‑induced dimensional collapse, with gravity naturally transitioning to an effective 2‑dimensional scaling in the low‑surface‑density limit.
 \end{abstract}
 
 \section{Introduction}
-Modern physics treats 3D space as a fundamental background. However, the N.E.A. Framework, as established in Papers I-III, posits that spacetime and gravity emerge from a discrete causal graph governed by enthalpy conservation and the principle of least action. Following the philosophical insights of \textit{Being is Time} (Chapters 24-26), we treat the perceived 3D volume as a tension‑induced bulge on a 2D “electronic replication surface.” This work provides numerical and observational support for this paradigm shift, achieved through intensive human‑AI collaboration over a short period.
+Modern physics treats 3D space as a fundamental background. However, the N.E.A. Framework, as established in Papers I-III, posits that spacetime and gravity emerge from a discrete causal graph governed by enthalpy conservation and the principle of least action. Following the philosophical insights of \textit{Being is Time}~\cite{book} (Chapters 24-26), we treat the perceived 3D volume as a tension‑induced bulge on a 2D “holographic encoding surface.” This work provides numerical and observational support for this paradigm shift, achieved through intensive human‑AI collaboration over a short period.
 
 \section{Numerical Experiments: The Mathematical Basis of Dimensional Collapse}
 To test the hypothesis that dimension varies with density, we designed a series of numerical experiments entirely within discrete graph theory, independent of any continuous background. All code is open source (see Appendix A).
@@ -106,7 +106,7 @@ Let $\{G_N\}$ be a sequence of graphs obtained from uniform random point sets by
 \centering
 \caption{Sparse graph limit results}
 \label{tab:sparse}
-\begin{tabular}{cccc}
+\begin{tabular}{lcccc}
 \toprule
 $N$ & seed 0 & seed 1 & seed 2 & average $q$ \\
 \midrule
@@ -183,7 +183,7 @@ All 138 galaxies were successfully fitted; 77 satisfy the quality criterion ($\c
     \item $q\approx 1.2$–$1.6$: 27 galaxies (transition regime)
     \item $q\approx 1.6$–$2.0$: 12 galaxies (high‑density central regions, approaching 3D gravity)
 \end{itemize}
-Note that $q$ is a radial function: in the galactic center ($r\ll R_c$) $q$ approaches 2; in the transition region ($r\sim R_c$) $q$ takes intermediate values; in the outskirts ($r\gg R_c$) $q$ tends to 1. NGC 3198 fitted in the outer region ($r>10$ kpc) gives $q=1.074$ (Fig. \ref{fig:ngc3198}), indicating that the outer disk has already relaxed to the 2D ground state, while the inner region (not fitted) is expected to show $q\sim1.5$.
+Note that $q$ is a radial function: in the galactic center ($r\ll R_c$) $q$ approaches 2; in the transition region ($r\sim R_c$) $q$ takes intermediate values; in the outskirts ($r\gg R_c$) $q$ tends to 1. NGC 3198 fitted in the outer region ($r>10$ kpc) gives $q=1.074$ and $R_c=4.0$ kpc (Fig. \ref{fig:ngc3198}), indicating that the outer disk has already relaxed to the 2D ground state, while the inner region (not fitted) is expected to show $q\sim1.5$.
 
 \begin{figure}[htbp]
 \centering
@@ -222,10 +222,11 @@ Table \ref{tab:nfw_compare} compares N.E.A. with NFW. N.E.A. achieves comparab
 \midrule
 Successful fits & 138 & 138 \\
 High‑quality ($\chi^2/\nu<5$) & 77 & 91 \\
-Free parameters & 154 & 182 \\
+Free parameters$^*$ & 154 & 182 \\
 Avg. $\chi^2/\nu$ (high‑quality) & 2.1 & 3.8 \\
 BIC & Superior & Inferior \\
 \bottomrule
+\multicolumn{3}{l}{\footnotesize $^*$ Counted only for high‑quality galaxies (77 for N.E.A., 91 for NFW).}
 \end{tabular}
 \end{table}
 
@@ -292,14 +293,21 @@ We performed a blind test on the extreme low‑surface‑brightness galaxy UGC�
 
 Two additional low‑surface‑brightness galaxies, DDO 154 and F583‑1, were also examined. Their rotation curves do not extend far enough to reach the asymptotic 2D regime; consequently, they are not expected to exhibit $q\approx 1$. The fact that they do not produce spurious $q\approx 1$ signals provides an independent cross‑check: the model correctly distinguishes between regions that have relaxed to the 2D ground state and those that remain in the transition zone.
 
-\subsection{Space Bubbles and the Fermi Paradox (Speculative)}
-Each mass sustains a 3D bubble of radius $R_c$. For the Sun, $R_c^{\odot}\approx 6500$ AU. Beyond that, space becomes thin, unable to sustain complex 3D structures. Using $\Sigma_c \approx 300\,M_\odot/\text{pc}^2$ and the relation $\Sigma = M/(\pi r^2)$ for a spherical rock of density $\rho \approx 3000\,\text{kg/m}^3$, we solve $M/(\pi r^2) = \Sigma_c$. With $M = (4/3)\pi r^3 \rho$, this yields a critical radius $r_0 = (3\Sigma_c)/(4\rho) \approx 40$ m. This is an independent prediction of the N.E.A. framework: objects below this scale may experience dimensional instability and cannot sustain coherent 3D self‑gravity. The size of the first confirmed interstellar object ‘Oumuamua ($\sim 100$–$200$ m) lies above this threshold, providing independent support.
-
 \subsection{Recursive Knotting and the Fermion Spectrum}
-The recursive structure $0D\to1D\to2D\to3D$ aligns with the philosophical architecture of Chapter 26. Fermions may correspond to topological defects on the 2D tapestry, with algebraic structure $U(1)\times SU(2)\times SU(3)$ arising from knot invariants.
+The recursive structure $0D\to1D\to2D\to3D$ aligns with the philosophical architecture of Chapter 26. We speculate that fermions may correspond to topological defects on the 2D tapestry, and that the algebraic structure $U(1)\times SU(2)\times SU(3)$ might arise from knot invariants in a higher‑dimensional embedding. A concrete derivation is left for future work.
 
 \subsection{Open Problems and Acknowledgment of Incompleteness}
-Two central conjectures remain unproven: the discrete Rindler horizon and Lorentzian signature, and the convergence of the sparse graph limit. Moreover, the analytic derivation of the emergence of $q=2$ from anisotropic knotting is still lacking; at present it rests on numerical evidence and the physical interpretation of tension‑induced phases. We openly acknowledge these gaps and invite the community to engage in their rigorous proof. This honest admission distinguishes a scientific research program from a dogmatic claim.
+Papers I–III of this series list seven open problems that remain unproven. Within the present work, two of them have been significantly simplified:
+
+\textbf{Discrete Rindler horizon and Lorentzian signature.}  
+The numerical experiments in Sec. 2.1 (Table \ref{tab:rindler}) show that the key thermodynamic ratios converge to their continuum values ($dQ/(TS)\to 8\pi$, winding number $\to 1$) as the lattice size increases. The remaining task is to prove that these numerical limits exist and are unique for the class of causal‑invariant rewriting rules that generate the graph. This is now a finite, well‑posed problem.
+
+\textbf{Sparse graph limit.}  
+Originally formulated for a 3D network, the conjecture has been simplified: Sec. 2.3 (Table \ref{tab:sparse}) shows that after Lloyd relaxation, sparse graphs converge to a smooth 2D Euclidean manifold with force exponent $q=1$. The problem is therefore reduced to proving convergence in geodesic distance for 2D random geometric graphs — a standard setting in geometric graph theory.
+
+The remaining five open problems — the emergence of the fermion spectrum, the microscopic justification of logarithmic complexity, the dynamical determination of the constants $k$ and $p$, the quantitative model of phase transitions, and biological allometric scaling (Kleiber’s law) — remain entirely open. No progress has been made on these within this work.
+
+Moreover, the analytic derivation of the $q=2$ phase (3D gravity) from anisotropic knotting is still lacking; at present it rests on numerical evidence and the physical interpretation of tension‑induced phases. We openly acknowledge these gaps and invite the community to engage in their rigorous proof. This honest admission distinguishes a scientific research program from a dogmatic claim.
 
 \section{Conclusion}
 We have presented numerical and observational evidence for the N.E.A. framework:
@@ -367,11 +375,12 @@ N.E.A. gravity & $V_{\text{obs}}^2 = V_{\text{bar}}^2\left[1+\left(\frac{R}{R_c}
 \end{tabular}
 \end{table}
 
+\clearpage
+
 \begin{thebibliography}{99}
 \bibitem{Lelli2016} Lelli, F., McGaugh, S. S., \& Schombert, J. M. (2016). SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves. \textit{AJ}, 152, 157.
-\bibitem{paperI} Zhang, Y. (2026). From Rigid Axioms to Emergent Enthalpy: The N.E.A. Framework under Computational Constraints (Paper I). \textit{Zenodo}. \url{https://doi.org/10.5281/zenodo.19415974}
-\bibitem{paperII} Zhang, Y. (2026). The Physical Universe from the N.E.A. Framework: Spacetime, Gravity, and Gauge Groups as Computational Emergence (Paper II). \textit{Zenodo}. \url{https://doi.org/10.5281/zenodo.19415974}
-\bibitem{paperIII} Zhang, Y. (2026). Economic Order and Social Cycles from the N.E.A. Framework: Pareto Distributions, Market Stability, and the Dynamics of Redistribution (Paper III). \textit{Zenodo}. \url{https://doi.org/10.5281/zenodo.19415974}
+\bibitem{nea123} Zhang, Y. (2026). Foundations of Network Emergent Architecture (N.E.A.): Papers I–III (Collected Preprints). \textit{Zenodo}. \url{https://doi.org/10.5281/zenodo.19490529}
+\bibitem{book} Zhang, Y. (2025). \textit{Being is Time}. ISBN 978-1-917850-74-2 (Chinese Version). ISBN 978-1-80609-401-1 (English Version).
 \bibitem{jacobson} Jacobson, T. (1995). Thermodynamics of Spacetime: The Einstein Equation of State. \textit{Phys. Rev. Lett.}, 75, 1260.
 \bibitem{verlinde} Verlinde, E. (2011). On the Origin of Gravity and the Laws of Newton. \textit{JHEP}, 1104, 029.
 \bibitem{tHooft} 't Hooft, G. (1993). Dimensional reduction in quantum gravity. \textit{arXiv:gr-qc/9310026}.
