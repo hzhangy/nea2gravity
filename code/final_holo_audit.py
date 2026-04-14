@@ -62,6 +62,25 @@ def final_audit():
     # 读取 N.E.A. 拟合结果
     fit = pd.read_csv('nea_hd_fit.csv')
     fit['Galaxy'] = fit['Galaxy'].astype(str).str.strip()
+
+    # 提取整数部分作为索引（例如 "15.2" -> 15）
+    fit['idx_int'] = fit['Galaxy'].str.extract(r'^(\d+)').astype('Int64')
+
+    # 构建编号到名称的映射（使用整数索引）
+    t1_map = parse_table1_fixed('Table1.mrt')
+    idx_to_name = {}
+    for i, (name, params) in enumerate(t1_map.items(), start=1):
+        idx_to_name[i] = name
+
+    # 将整数索引映射为星系名
+    fit['GalaxyName'] = fit['idx_int'].map(idx_to_name)
+
+    # 删除无法映射的行
+    fit = fit.dropna(subset=['GalaxyName'])
+    # 使用名称作为合并键
+    fit['Galaxy'] = fit['GalaxyName']
+    fit = fit.drop(columns=['GalaxyName'])
+ 
     good = fit[(fit['chi2_red'] < 5) & (fit['cov_ok'] == True)].copy()
     print(f"N.E.A. 拟合成功: {len(fit)} 星系, 质量良好: {len(good)} 星系")
 
