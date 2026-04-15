@@ -12,9 +12,9 @@ df['Verr'] = df['Verr'].replace(0, np.nan).fillna(0.1)
 df['Verr'] = df.apply(lambda row: max(row['Verr'], 0.01*row['Vobs']), axis=1)
 
 def nea_model(R, q, Rc, Vbaryon):
-    """N.E.A. 全息维度模型"""
-    term = (R / Rc) ** (2 - q)
-    return Vbaryon * np.sqrt(1 + term)
+    factor = 1.0 + R / Rc
+    exponent = (2.0 - q) / 2.0   # 返回速度，平方后为 Vbar^2 * (1+R/Rc)^{2-q}
+    return Vbaryon * (factor ** exponent)
 
 results = []
 

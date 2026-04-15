@@ -1,83 +1,51 @@
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
-data_text = """
-NGC3198      13.8    0.32  24.40 35.90   0.00  63.28   0.00 1084.92     0.00
-NGC3198      13.8    0.64  43.30 16.30   0.00  73.66   0.00  590.57     0.00
-NGC3198      13.8    0.96  45.50 16.10   0.00  78.98   0.00  410.97     0.00
-NGC3198      13.8    1.28  58.50 15.40   0.35  82.70   0.00  329.34     0.00
-NGC3198      13.8    1.61  68.80  7.61   0.15  84.22   0.00  268.62     0.00
-NGC3198      13.8    1.93  76.90 10.30  -0.05  83.17   0.00  247.67     0.00
-NGC3198      13.8    2.24  82.00  8.09  -0.47  87.04   0.00  227.56     0.00
-NGC3198      13.8    2.57  86.90  7.60  -0.95  88.91   0.00  205.02     0.00
-NGC3198      13.8    2.89  97.60  3.03  -1.43  88.98   0.00  200.20     0.00
-NGC3198      13.8    3.21 100.00  5.31  -1.14  93.81   0.00  208.58     0.00
-NGC3198      13.8    3.54 107.00  7.51  -0.39 101.22   0.00  208.47     0.00
-NGC3198      13.8    3.85 113.00  7.32   0.36 108.53   0.00  196.07     0.00
-NGC3198      13.8    4.17 117.00  5.21   1.52 115.51   0.00  179.96     0.00
-NGC3198      13.8    4.50 119.00  5.67   3.07 120.51   0.00  164.19     0.00
-NGC3198      13.8    4.82 127.00  5.39   4.63 125.42   0.00  150.99     0.00
-NGC3198      13.8    5.15 132.00  4.34   6.02 129.40   0.00  138.08     0.00
-NGC3198      13.8    5.46 134.00  2.36   7.16 133.15   0.00  126.00     0.00
-NGC3198      13.8    5.78 137.00  0.89   8.31 136.45   0.00  113.63     0.00
-NGC3198      13.8    6.10 140.00  2.84   9.46 139.41   0.00  101.19     0.00
-NGC3198      13.8    6.43 142.00  0.88  10.61 141.85   0.00   86.52     0.00
-NGC3198      13.8    6.74 144.00  1.23  11.77 142.32   0.00   70.23     0.00
-NGC3198      13.8    7.06 146.00  1.57  12.87 140.94   0.00   57.67     0.00
-NGC3198      13.8    8.04 147.00  3.00  16.39 135.68   0.00   40.74     0.00
-NGC3198      13.8    9.04 148.00  3.00  20.03 130.79   0.00   31.83     0.00
-NGC3198      13.8   10.04 152.00  2.00  23.68 128.10   0.00   26.64     0.00
-NGC3198      13.8   11.04 155.00  2.00  27.08 126.67   0.00   21.02     0.00
-NGC3198      13.8   12.05 156.00  2.00  30.11 124.98   0.00   15.42     0.00
-NGC3198      13.8   14.05 157.00  2.00  34.48 118.12   0.00    6.42     0.00
-NGC3198      13.8   16.07 153.00  2.00  36.43 108.22   0.00    2.95     0.00
-NGC3198      13.8   18.13 153.00  2.00  37.76 101.10   0.00    2.39     0.00
-NGC3198      13.8   20.05 154.00  2.00  39.83  96.40   0.00    1.44     0.00
-NGC3198      13.8   22.12 153.00  2.00  40.92  91.56   0.00    0.72     0.00
-NGC3198      13.8   24.03 150.00  2.00  41.77  87.03   0.00    0.28     0.00
-NGC3198      13.8   26.10 149.00  2.00  43.71  82.67   0.00    0.16     0.00
-NGC3198      13.8   28.16 148.00  2.00  45.41  79.06   0.00    0.08     0.00
-NGC3198      13.8   30.08 146.00  2.00  45.29  76.07   0.00    0.04     0.00
-NGC3198      13.8   32.14 147.00  2.00  44.56  73.27   0.00    0.02     0.00
-NGC3198      13.8   34.06 148.00  2.00  44.81  70.91   0.00    0.01     0.00
-NGC3198      13.8   36.12 148.00  2.00  45.90  68.62   0.00    0.01     0.00
-NGC3198      13.8   38.19 149.00  2.00  46.75  66.59   0.00    0.00     0.00
-NGC3198      13.8   40.10 150.00  2.00  47.48  64.84   0.00    0.00     0.00
-NGC3198      13.8   42.17 150.00  3.00  48.93  63.10   0.00    0.00     0.00
-NGC3198      13.8   44.08 149.00  3.00  47.84  61.63   0.00    0.00     0.00
-"""
+# 读取数据
+col_names = ['Galaxy', 'R', 'Vobs', 'Verr', 'Vgas', 'Vdisk', 'Vbulge', 'Vhalo', 'Flag']
+df = pd.read_csv('table2.txt', sep=r'\s+', names=col_names)
+df['Galaxy'] = df['Galaxy'].astype(str).str.strip()
+g = df[df['Galaxy'] == '3.91'].sort_values('R')
 
-lines = data_text.strip().split('\n')
-R, V, V_err = [], [], []
-for line in lines:
-    parts = line.split()
-    if len(parts) >= 5:
-        R.append(float(parts[2]))
-        V.append(float(parts[3]))
-        V_err.append(float(parts[4]))
+R = g['R'].values
+Vobs = g['Vobs'].values
+Verr = g['Verr'].values
+Vbar = np.sqrt(g['Vgas']**2 + g['Vdisk']**2 + g['Vbulge']**2).values
 
-R = np.array(R)
-V = np.array(V)
-V_err = np.array(V_err)
+# 拟合参数
+q = 1.154
+Rc = 3.16
 
-print("Max V:", max(V))   # 应该输出 157.0
+# 模型计算
+V_model = Vbar * (1.0 + R / Rc) ** ((2.0 - q) / 2.0)
 
-q = 1.074
-Rc = 4.0
-Vflat = np.mean(V[R > 20])
-R_model = np.linspace(0, 45, 200)
-V_model = Vflat * R_model / np.sqrt(R_model**2 + Rc**2)
+# 按 R 排序（数据已排序，但为绘图保险）
+idx = np.argsort(R)
+R_sorted = R[idx]
+V_model_sorted = V_model[idx]
 
+# 绘图
 plt.figure(figsize=(8,5))
-plt.errorbar(R, V, yerr=V_err, fmt='ko', ecolor='gray', capsize=2, label='Observed data (SPARC)')
-plt.plot(R_model, V_model, 'r-', linewidth=2, label=f'N.E.A. fit (q={q:.3f}, Rc={Rc} kpc)')
+plt.errorbar(R, Vobs, yerr=Verr, fmt='ko', ecolor='gray', capsize=2, label='Observed (SPARC)')
+plt.plot(R_sorted, V_model_sorted, 'r-', lw=2, label=f'N.E.A. fit (q={q:.3f}, Rc={Rc:.2f} kpc)')
+
 plt.xlabel('Radius (kpc)')
 plt.ylabel('Velocity (km/s)')
 plt.title('NGC 3198 Rotation Curve')
 plt.legend()
 plt.grid(alpha=0.3)
-plt.xlim(0, 45)
-plt.ylim(0, 180)
+
+# 自动调整坐标轴，留出 5% 边距
+plt.xlim(0, R.max() * 1.05)
+all_velocities = np.concatenate([Vobs, V_model_sorted])
+plt.ylim(0, all_velocities.max() * 1.05)
+
 plt.tight_layout()
-plt.savefig('NGC3198_correct.png', dpi=150)
+plt.savefig('NGC3198_fit_nea.png', dpi=150)
 plt.show()
+
+# 同时打印模型值与观测值对比，供您检查
+print("R(kpc)  Vobs  Vbar  Vmodel  Residual")
+for i in range(min(10, len(R))):
+    print(f"{R[i]:6.2f} {Vobs[i]:6.1f} {Vbar[i]:6.1f} {V_model[i]:6.1f} {Vobs[i]-V_model[i]:7.1f}")

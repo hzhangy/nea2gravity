@@ -115,9 +115,9 @@ def final_audit():
         # 重子速度贡献（采用修正的 M/L）
         Vb = np.sqrt(data['Vgas']**2 + 0.5 * data['Vdisk']**2 + 0.7 * data['Vbulge']**2).values
         safe_Vb = np.maximum(Vb, 1e-5)
-        x = R / Rc
-        term = x ** (2 - q)
-        inv = (Vobs / safe_Vb)**2 - term
+        x = R / Rc  
+        factor = 1.0 + x
+        inv = (Vobs / safe_Vb)**2 / (factor ** (2 - q))
         valid = (x > 0.05) & (x < 20) & (Vobs/safe_Vb > 0) & (Vobs/safe_Vb < 3) & (np.isfinite(inv))
         if not any(valid):
             continue
