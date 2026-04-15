@@ -23,7 +23,7 @@ Install with `pip install -r requirements.txt` (if provided).
 
 See individual scripts for usage. A typical workflow:
 
-1. Run `code/nea_galaxy_fit.py` or `code/batch_sparc_q_fit.py` to fit galaxies.
+1. Run `code/nea_galaxy_fit.py` to fit galaxies.
 2. Run `code/final_holo_audit.py` to compute the holographic invariant.
 3. Run `code/nea_extreme_tests.py` for consistency checks.
 
